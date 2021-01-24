@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Sat Jan 23 13:23:52 2021 as: nmap -sC -sV -p- -oA nmap/ 10.0.1.6 -->
+<nmaprun scanner="nmap" args="nmap -sC -sV -p- -oA nmap/ 10.0.1.6" start="1611426232" startstr="Sat Jan 23 13:23:52 2021" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="10.0.1.6" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<host starttime="1611426233" endtime="1611426291"><status state="up" reason="echo-reply" reason_ttl="63"/>
+<address addr="10.0.1.6" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65532">
+<extrareasons reason="resets" count="65532"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="7.6p1 Ubuntu 4ubuntu0.3" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.6p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  2048 9a:69:ee:7a:52:c5:1a:e7:e7:24:f9:97:98:45:cb:d7 (RSA)&#xa;  256 9b:10:d5:cf:bc:85:ee:24:d0:c2:46:da:51:96:1d:56 (ECDSA)&#xa;  256 ef:fc:5f:96:86:91:ec:00:f6:d1:b8:84:bc:06:1e:40 (ED25519)"><table>
+<elem key="fingerprint">9a69ee7a52c51ae7e724f9979845cbd7</elem>
+<elem key="bits">2048</elem>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQDpsqsSSNrNPKt9AKAUwyKq2qrYUQSSL8xz3InFv1Lr+MpREjzjz9LE5JR2z1bFSSSJCyM/7BWh/YPWGZeMYW7+LKvZAUr2RKTu04yevAN2tZSeLivKthb3pnLSRV7b54ogPhGgZkzNefFgvoh/yDEG/GYCn0CqjYdvUz0bONW6aXUhpaCvaqvwSJSl1LyIz0Usc23KZlq69c9nj2sRqHxkFy7tSRp6WjdcaPU8YK6yR/lE5gJTKVtoHMh0ytahK8zAYAZ5EZlvoYgdHQgTMWGijCSY2xG/HPiU1KmJhJCFowrYDGBFSJbUQiibPUcXA7xrWeqJF3tbr3h8oW56AsBl</elem>
+<elem key="type">ssh-rsa</elem>
+</table>
+<table>
+<elem key="fingerprint">9b10d5cfbc85ee24d0c246da51961d56</elem>
+<elem key="bits">256</elem>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBAFGnferqs40GI6XaYCjw47RHogb8b6WUhG99Q/FMWK7amttAn3YLLgPrtCPfdDv+Vx55TOTSM/SLRtYDAzUc3Q=</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+</table>
+<table>
+<elem key="fingerprint">effc5f968691ec00f6d1b884bc061e40</elem>
+<elem key="bits">256</elem>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIEmZlAs0Jez14Y7F4oN1Rqn06oHFjtkX/0V71rVaWRVI</elem>
+<elem key="type">ssh-ed25519</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="53720"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ftp" product="vsftpd" version="3.0.3" ostype="Unix" method="probed" conf="10"><cpe>cpe:/a:vsftpd:vsftpd:3.0.3</cpe></service><script id="ftp-anon" output="Anonymous FTP login allowed (FTP code 230)"/><script id="ftp-syst" output="&#xa;  STAT: &#xa;FTP server status:&#xa;     Connected to ::ffff:10.0.0.5&#xa;     Logged in as ftp&#xa;     TYPE: ASCII&#xa;     No session bandwidth limit&#xa;     Session timeout in seconds is 300&#xa;     Control connection is plain text&#xa;     Data connections will be plain text&#xa;     At session startup, client count was 4&#xa;     vsFTPd 3.0.3 - secure, fast, stable&#xa;End of status"><elem key="STAT">&#xa;FTP server status:&#xa;     Connected to ::ffff:10.0.0.5&#xa;     Logged in as ftp&#xa;     TYPE: ASCII&#xa;     No session bandwidth limit&#xa;     Session timeout in seconds is 300&#xa;     Control connection is plain text&#xa;     Data connections will be plain text&#xa;     At session startup, client count was 4&#xa;     vsFTPd 3.0.3 - secure, fast, stable&#xa;End of status</elem>
+</script></port>
+<port protocol="tcp" portid="62789"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache httpd" version="2.4.29" extrainfo="(Ubuntu)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.29</cpe></service><script id="http-server-header" output="Apache/2.4.9 (Ubuntu)"><elem>Apache/2.4.29 (Ubuntu)</elem>
+</script><script id="http-title" output="Apache2 Ubuntu Default Page: It works"><elem key="title">Apache2 Ubuntu Default Page: It works</elem>
+</script></port>
+</ports>
+<times srtt="21414" rttvar="819" to="100000"/>
+</host>
+<runstats><finished time="1611426291" timestr="Sat Jan 23 13:24:51 2021" summary="Nmap done at Sat Jan 23 13:24:51 2021; 1 IP address (1 host up) scanned in 58.89 seconds" elapsed="58.89" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

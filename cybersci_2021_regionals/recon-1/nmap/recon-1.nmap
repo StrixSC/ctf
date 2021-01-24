@@ -1,0 +1,23 @@
+# Nmap 7.91 scan initiated Sat Jan 23 12:46:30 2021 as: nmap -sC -sV -oA nmap 10.0.1.8
+Nmap scan report for 10.0.1.8
+Host is up (0.010s latency).
+Not shown: 998 closed ports
+PORT    STATE SERVICE  VERSION
+22/tcp  open  ssh      OpenSSH 8.2p1 Ubuntu 4ubuntu0.1 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 54:bb:c8:28:da:9c:df:af:99:1b:c7:aa:bd:ce:39:5f (RSA)
+|   256 09:b8:95:3d:30:4d:6e:46:e0:90:ab:18:e2:a6:0f:bf (ECDSA)
+|_  256 13:d6:21:92:04:d0:4d:bf:c6:b5:72:b4:c1:c8:a8:8b (ED25519)
+443/tcp open  ssl/http Apache httpd 2.4.41 ((Ubuntu))
+|_http-generator: Hugo 0.74.1
+|_http-server-header: Apache/2.4.41 (Ubuntu)
+|_http-title: AxxHatz Konsulting
+| ssl-cert: Subject: commonName=AxxhatzWeb/organizationName=Axxhatz/stateOrProvinceName=Some-State/countryName=AU
+| Not valid before: 2021-01-05T23:34:48
+|_Not valid after:  2022-01-05T23:34:48
+| tls-alpn: 
+|_  http/1.1
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Jan 23 12:46:57 2021 -- 1 IP address (1 host up) scanned in 26.67 seconds
