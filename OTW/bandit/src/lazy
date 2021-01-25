@@ -1,0 +1,5 @@
+#!/bin/bash
+# Quickly send commands through ssh to the desired user on the bandit wargame server.
+# Usage: ./lazy <username> <command>
+# Example: ./lazy bandit26 "ls -la"
+echo "$2" | ssh -i $1.rsa $1@bandit.labs.overthewire.org -p 2220
