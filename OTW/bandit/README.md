@@ -5,7 +5,7 @@
 
 #### Writeup
 
-#####Level 0-1:
+##### Level 0-1
 
 The first level only asks us to SSH into the bandit0 user on the labs' server. This can be done using the OpenSSH utility:
 ```
@@ -13,19 +13,19 @@ ssh bandit0@bandit.labs.overthewire.org -p 2220
 cat readme
 ```
 
-#####level 1-2: 
+##### level 1-2 
 
 This level is very similar, but instead of the flag being in the ```readme``` file, it's in a file called ```-```, which we cannot directly cat, because bash interprets the ```-``` character as 
 ssh into bandit1@bandit.labs.overthewire.org -p 2220
 cat ./-
 password is found
 
-#####level 2-3
+##### level 2-3
 ```cat spaces\ in\ this\ filename```
 or 
 ```cat "space in this filename"```
 
-##### level 3-4:
+##### level 3-4
 ssh into bandit2@bandit.labs.overthewire.org -p 2220
 
 ``` 
@@ -38,7 +38,7 @@ We see there is hidden file.
 cat .hidden
 ```
 
-#####level 4-5: 
+##### level 4-5 
 
 If we navigate to the inhere/ directory. There are a bunch of files. Of course we could check them one by one, but we don't learn anything by doing that. 
 Instead, we can try to find which file to look for inparticular. We're probably looking for something that contains some readable ASCII text.
@@ -66,7 +66,7 @@ Returns:
 
 The seventh file thus inevitably contains the flag.
 
-#####level 5-6
+##### level 5-6
 
 When going into the ```inhere/``` directory, we first see a bunch of folders all titled ``maybehere##``, with ## ranging from 0 to 20. If we go into ```maybehere00```, we see a bunch of files as such:
 
@@ -125,7 +125,7 @@ Yields the following:
 Only two of these are interesting to me, the ```maybehere07/.file2``` and ```maybehere17/-file1```. Sure enough, the flag was inside the first, as well as 1000 spaces to make it sneak past.
 
 
-#####Level 6-7
+##### Level 6-7
 
 For this level, we're looking for a file that meets certain conditions. 
 Prompt: 
@@ -148,7 +148,7 @@ find / -readable -user bandit7 -group bandit6 -size 33c 2>/dev/null
 
 This will leave us with one file that contains the flag.
 
-#####Level 7-8
+##### Level 7-8
 
 This one is very simple. Using grep with or without any flags will give us the output we are looking for:
 
@@ -156,7 +156,7 @@ This one is very simple. Using grep with or without any flags will give us the o
 cat data.txt | grep -ie millionth
 ```
 
-#####Level 8-9
+##### Level 8-9
 
 Here we are looking for the only line of text that occurs only once. We can make use of the ```sort``` and ```uniq``` commands for that.
 
@@ -167,7 +167,7 @@ cat data.txt | sort -bh | uniq -u
 - ```uniq -u``` will only return unique lines.
 
 
-#####Level 9-10
+##### Level 9-10
 
 We're looking for the password in the data.txt file once again, but this time it's the only line that is a human readable string and that is preceded by a bunch of = signs.
 Human-readable in a file of a bunch of non human-readable strings will immediately make us think of the ```strings``` command.
@@ -179,7 +179,7 @@ cat data.txt | strings | grep -ie =====
 
 Will return a few outputs, but only one of which has a flag-like 33 character string.
 
-#####Level 10-11
+##### Level 10-11
 
 Another very simple one, if you've done other CTFs or puzzles, base64 is a very popular way to encode data. Fortunately, it's also very easy to decode too. 
 
@@ -189,7 +189,7 @@ The ```base64 -d``` command will decode base64 input (given the -d flag of cours
 cat data.txt | base64 -d
 ```
 
-#####Level 11-12
+##### Level 11-12
 
 The prompt for this one is similar to the previous level. We must transform the output of the data.txt file into the format that we want. In this case the letters were shifted 13 characters, such that it's a ROT13 transformation. We can use an online converter or run the ```tr``` command:
 
@@ -200,7 +200,7 @@ cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
 The tr command takes the output and **transforms** it, using the various given sets as arguments to the command. In this case, the first set contains all of the letters, meaning we want to operate on all letters of the output of data.txt. The second set states that we want to replace all letters of the first output with N-ZA-M and the same for the lowercase letters. For example, if we have "ABC", it will be changed for a "NMP", shifting the letter 13 counts forward. Likewise if we have "NMP" instead.  
 
 
-#####Level 12-13
+##### Level 12-13
 
 This level is very common in beginner CTFs. It's also very good for practicing your archive extraction speed on the command line!
 
@@ -252,7 +252,7 @@ drwxrws-wt 4649 root     root 847872 Jan 24 21:27 ..
 
  The flag is in the last ASCII Text file.
 
-#####Level 13-14
+##### Level 13-14
 
 For this level, we don't need to find a flag. A private key file is listed and the contents must be copied to be used to log into the bandit14 user.
 
@@ -266,7 +266,7 @@ The ```-i``` uses an identity file to authentify. The ```chmod 0400``` is often 
 
 Once in, the password of bandit14 is in ```/etc/bandit_pass/bandit14```
 
-#####Level 14-15
+##### Level 14-15
 
 We now just need to send a packet to the specified port on localhost, as stated by the prompt. The ```nc``` command will allow us to do that:
 
@@ -274,7 +274,7 @@ We now just need to send a packet to the specified port on localhost, as stated 
 cat /etc/bandit_pass/bandit14 | nc localhost 30000
 ```
 
-#####Level 15-16
+##### Level 15-16
 
 For this level, we need to send the bandit15 password to localhost at port 30001 using SSL encryption. The ```OpenSSL s_client``` utility is very useful for that:
 
@@ -284,7 +284,7 @@ $ openssl s_client -connect :30001
 
 Then just send the password and you'll receive the next level's password back.
 
-#####Level 16-17
+##### Level 16-17
 
 The level's prompt is very specific. We need to scan the localhost to find open ports between 31000 and 32000. Then we need to see if any of them accept SSL. The only one that does will have the password for the next level once we submit the current level's password to it.
 
@@ -589,7 +589,7 @@ Wrong! Please enter the correct pincode. Try again.
 Correct!
 The password of user bandit25 is uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG
 ```
-#####Level 25-26
+##### Level 25-26
 
 ###### Sidenote: This level was the one that took me the longuest to figure out. I would've never figured it out had it not been for the list of commands that the challenge page suggests.
 
@@ -665,7 +665,7 @@ To finally get the password for the user.
 
 This was by far the most original challenge in the Bandit wargame, and one of the most original out there too.
 
-#####Level 26-27
+##### Level 26-27
 
 For this level, we need to do the same hacky thing with the ```more``` command. ssh into the bandit26 user with minimal space on the screen to trigger the allowance of visual mode. Trigger the editor mode and now you're able to input commands.
 
@@ -697,7 +697,7 @@ To do that, run:
 
 And we'll have the password for bandit27.
 
-#####Level 27-28:
+##### Level 27-28
 
 This level is very simple compared to the other ones. The prompt simply says that we need to clone the repo at the url ```ssh://bandit27-git@localhost/home/bandit27-git/repo```and we'll be able to find the flag after that.
 
@@ -718,7 +718,7 @@ The password is the same as the bandit27 user's password.
 
 The password for the bandit28 user is located in the ```README``` located in the repo/ directory.
 
-#####Level 28-29:
+##### Level 28-29
 
 Once again, clone the repo into a newly created directory under the ```/tmp``` directory.
 
@@ -795,7 +795,7 @@ Some notes for level29 of bandit.
 - password: bbc96594b4e001778eee9975372716b2
 
 ```
-#####Level 29-30:
+##### Level 29-30
 
 Another git level, that's fine, it helps us master our git usage. For this one, do the same thing and clone the repo into a directory under ```tmp```.
 
@@ -818,7 +818,7 @@ bandit29@bandit:/tmp/strix29/repo$ git branch -a
 
 There we go, we have a dev branch. We can switch to it using ```git checkout dev```, and the password for the bandit30 user is in the ```README.md``` file.
 
-#####Level 30-31:
+##### Level 30-31
 
 Yet another git challenge. For this one, we're going into it knowing that we've already done a branch-based challenge and a commit based challenge, so it will probably not be the same.
 
@@ -858,7 +858,7 @@ secret
 
 Running a ```git show secret``` will reveal the flag.
 
-#####Level 30-31:
+##### Level 30-31
 
 *YAGC*.
 
@@ -911,9 +911,9 @@ git push origin master
 ```
 The flag will then be outputted through the use of a git server-side hook.
 
-#####Level 32-33:
+##### Level 32-33
 
-######Sidenote: As of writing this, there has been two iterations. Levels 0-25 were done at the date mentionned in the title, but 26-33 were done in May 2020. This is because the challenges got introduced then. Level 33 is the last challenge, but there could always be more later on.
+###### Sidenote: As of writing this, there has been two iterations. Levels 0-25 were done at the date mentionned in the title, but 26-33 were done in May 2020. This is because the challenges got introduced then. Level 33 is the last challenge, but there could always be more later on.
 
 This time, we're back to escape. When logging in, we're greeted with the uppercase shell. This is an interactive shell that transforms all inputs to their uppercase format, making it very difficult to execute commands.
 
@@ -948,7 +948,7 @@ We can then execute find the password for the user in the ```/etc/bandit_pass/ba
 
 
 
-#####Level 33-34:
+##### Level 33-34
 ```
 bandit33@bandit:~$ cat README.txt 
 Congratulations on solving the last level of this game!
