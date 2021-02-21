@@ -1,3 +1,5 @@
+// StrixSC | Graph | PolyCTF 20-02-2021
+
 import * as net from "net";
 const jsonFix = require('json-fixer')
 var litepathfindings = require('lite-pathfindings');
