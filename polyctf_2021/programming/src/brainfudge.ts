@@ -1,3 +1,5 @@
+// StrixSC | Brainfudge | PolyCTF 20-02-2021
+
 import * as net from "net";
 const port = 30544;
 const addr = "challenges.ctfd.io";
