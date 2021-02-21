@@ -311,7 +311,7 @@ for i in range(0, 10000):
     word_form = p.number_to_words(i)
     word_form = word_form.replace(",", "")
 
-	# Because there are some orthographical mistakes, I need to modify some things
+	# Because there are some orthographic mistakes, I need to modify some things
 	
 	
 	# This is because it would for some reason add "zero" if the number's last two integers were 0 (ie.: 5700 would be five thousands zero)
@@ -326,7 +326,7 @@ for i in range(0, 10000):
     if(index[0] != '1'):
         word_form = word_form.replace("thousand", "thousands")
 
-		# More orthographical mistakes, where 40s would be written as fourty instead of forty...
+		# More orthographic mistakes, where 40s would be written as fourty instead of forty...
     word_form = word_form.replace("forty", "fourty")
     word_list = word_form.split()
     remove_list = ['and']
