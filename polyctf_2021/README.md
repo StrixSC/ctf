@@ -2,7 +2,7 @@
 
 ###### 20-02-2021 | Online | Jeopardy
 ###### Organizers : PolyHx (Polytechnique Montreal)
-###### Final placement: 17th
+###### Final placement: 17/~200
 
 ![5a351d5ecdcf53f6e2822a516da1cced.png](./_resources/23d9535e44d74cb8877c0037efd70ab1.png)
 
