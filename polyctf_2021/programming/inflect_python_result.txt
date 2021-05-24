@@ -1,0 +1,1000 @@
+{'zero': 0
+ 'one': 1
+ 'two': 2
+ 'three': 3
+ 'four': 4
+ 'five': 5
+ 'six': 6
+ 'seven': 7
+ 'eight': 8
+ 'nine': 9
+ 'ten ten': 10
+ 'eleven': 11
+ 'twelve': 12
+ 'thirteen': 13
+ 'fourteen': 14
+ 'fifteen': 15
+ 'sixteen': 16
+ 'seventeen': 17
+ 'eighteen': 18
+ 'nineteen': 19
+ 'twenty': 20
+ 'twenty-one': 21
+ 'twenty-two': 22
+ 'twenty-three': 23
+ 'twenty-four': 24
+ 'twenty-five': 25
+ 'twenty-six': 26
+ 'twenty-seven': 27
+ 'twenty-eight': 28
+ 'twenty-nine': 29
+ 'thirty': 30
+ 'thirty-one': 31
+ 'thirty-two': 32
+ 'thirty-three': 33
+ 'thirty-four': 34
+ 'thirty-five': 35
+ 'thirty-six': 36
+ 'thirty-seven': 37
+ 'thirty-eight': 38
+ 'thirty-nine': 39
+ 'fourty': 40
+ 'fourty-one': 41
+ 'fourty-two': 42
+ 'fourty-three': 43
+ 'fourty-four': 44
+ 'fourty-five': 45
+ 'fourty-six': 46
+ 'fourty-seven': 47
+ 'fourty-eight': 48
+ 'fourty-nine': 49
+ 'fifty': 50
+ 'fifty-one': 51
+ 'fifty-two': 52
+ 'fifty-three': 53
+ 'fifty-four': 54
+ 'fifty-five': 55
+ 'fifty-six': 56
+ 'fifty-seven': 57
+ 'fifty-eight': 58
+ 'fifty-nine': 59
+ 'sixty': 60
+ 'sixty-one': 61
+ 'sixty-two': 62
+ 'sixty-three': 63
+ 'sixty-four': 64
+ 'sixty-five': 65
+ 'sixty-six': 66
+ 'sixty-seven': 67
+ 'sixty-eight': 68
+ 'sixty-nine': 69
+ 'seventy': 70
+ 'seventy-one': 71
+ 'seventy-two': 72
+ 'seventy-three': 73
+ 'seventy-four': 74
+ 'seventy-five': 75
+ 'seventy-six': 76
+ 'seventy-seven': 77
+ 'seventy-eight': 78
+ 'seventy-nine': 79
+ 'eighty': 80
+ 'eighty-one': 81
+ 'eighty-two': 82
+ 'eighty-three': 83
+ 'eighty-four': 84
+ 'eighty-five': 85
+ 'eighty-six': 86
+ 'eighty-seven': 87
+ 'eighty-eight': 88
+ 'eighty-nine': 89
+ 'ninety': 90
+ 'ninety-one': 91
+ 'ninety-two': 92
+ 'ninety-three': 93
+ 'ninety-four': 94
+ 'ninety-five': 95
+ 'ninety-six': 96
+ 'ninety-seven': 97
+ 'ninety-eight': 98
+ 'ninety-nine': 99
+ 'one hundred zero': 100
+ 'one hundred one': 101
+ 'one hundred two': 102
+ 'one hundred three': 103
+ 'one hundred four': 104
+ 'one hundred five': 105
+ 'one hundred six': 106
+ 'one hundred seven': 107
+ 'one hundred eight': 108
+ 'one hundred nine': 109
+ 'one hundred ten ten': 110
+ 'one hundred eleven': 111
+ 'one hundred twelve': 112
+ 'one hundred thirteen': 113
+ 'one hundred fourteen': 114
+ 'one hundred fifteen': 115
+ 'one hundred sixteen': 116
+ 'one hundred seventeen': 117
+ 'one hundred eighteen': 118
+ 'one hundred nineteen': 119
+ 'one hundred twenty': 120
+ 'one hundred twenty-one': 121
+ 'one hundred twenty-two': 122
+ 'one hundred twenty-three': 123
+ 'one hundred twenty-four': 124
+ 'one hundred twenty-five': 125
+ 'one hundred twenty-six': 126
+ 'one hundred twenty-seven': 127
+ 'one hundred twenty-eight': 128
+ 'one hundred twenty-nine': 129
+ 'one hundred thirty': 130
+ 'one hundred thirty-one': 131
+ 'one hundred thirty-two': 132
+ 'one hundred thirty-three': 133
+ 'one hundred thirty-four': 134
+ 'one hundred thirty-five': 135
+ 'one hundred thirty-six': 136
+ 'one hundred thirty-seven': 137
+ 'one hundred thirty-eight': 138
+ 'one hundred thirty-nine': 139
+ 'one hundred fourty': 140
+ 'one hundred fourty-one': 141
+ 'one hundred fourty-two': 142
+ 'one hundred fourty-three': 143
+ 'one hundred fourty-four': 144
+ 'one hundred fourty-five': 145
+ 'one hundred fourty-six': 146
+ 'one hundred fourty-seven': 147
+ 'one hundred fourty-eight': 148
+ 'one hundred fourty-nine': 149
+ 'one hundred fifty': 150
+ 'one hundred fifty-one': 151
+ 'one hundred fifty-two': 152
+ 'one hundred fifty-three': 153
+ 'one hundred fifty-four': 154
+ 'one hundred fifty-five': 155
+ 'one hundred fifty-six': 156
+ 'one hundred fifty-seven': 157
+ 'one hundred fifty-eight': 158
+ 'one hundred fifty-nine': 159
+ 'one hundred sixty': 160
+ 'one hundred sixty-one': 161
+ 'one hundred sixty-two': 162
+ 'one hundred sixty-three': 163
+ 'one hundred sixty-four': 164
+ 'one hundred sixty-five': 165
+ 'one hundred sixty-six': 166
+ 'one hundred sixty-seven': 167
+ 'one hundred sixty-eight': 168
+ 'one hundred sixty-nine': 169
+ 'one hundred seventy': 170
+ 'one hundred seventy-one': 171
+ 'one hundred seventy-two': 172
+ 'one hundred seventy-three': 173
+ 'one hundred seventy-four': 174
+ 'one hundred seventy-five': 175
+ 'one hundred seventy-six': 176
+ 'one hundred seventy-seven': 177
+ 'one hundred seventy-eight': 178
+ 'one hundred seventy-nine': 179
+ 'one hundred eighty': 180
+ 'one hundred eighty-one': 181
+ 'one hundred eighty-two': 182
+ 'one hundred eighty-three': 183
+ 'one hundred eighty-four': 184
+ 'one hundred eighty-five': 185
+ 'one hundred eighty-six': 186
+ 'one hundred eighty-seven': 187
+ 'one hundred eighty-eight': 188
+ 'one hundred eighty-nine': 189
+ 'one hundred ninety': 190
+ 'one hundred ninety-one': 191
+ 'one hundred ninety-two': 192
+ 'one hundred ninety-three': 193
+ 'one hundred ninety-four': 194
+ 'one hundred ninety-five': 195
+ 'one hundred ninety-six': 196
+ 'one hundred ninety-seven': 197
+ 'one hundred ninety-eight': 198
+ 'one hundred ninety-nine': 199
+ 'two hundreds zero': 200
+ 'two hundreds one': 201
+ 'two hundreds two': 202
+ 'two hundreds three': 203
+ 'two hundreds four': 204
+ 'two hundreds five': 205
+ 'two hundreds six': 206
+ 'two hundreds seven': 207
+ 'two hundreds eight': 208
+ 'two hundreds nine': 209
+ 'two hundreds ten ten': 210
+ 'two hundreds eleven': 211
+ 'two hundreds twelve': 212
+ 'two hundreds thirteen': 213
+ 'two hundreds fourteen': 214
+ 'two hundreds fifteen': 215
+ 'two hundreds sixteen': 216
+ 'two hundreds seventeen': 217
+ 'two hundreds eighteen': 218
+ 'two hundreds nineteen': 219
+ 'two hundreds twenty': 220
+ 'two hundreds twenty-one': 221
+ 'two hundreds twenty-two': 222
+ 'two hundreds twenty-three': 223
+ 'two hundreds twenty-four': 224
+ 'two hundreds twenty-five': 225
+ 'two hundreds twenty-six': 226
+ 'two hundreds twenty-seven': 227
+ 'two hundreds twenty-eight': 228
+ 'two hundreds twenty-nine': 229
+ 'two hundreds thirty': 230
+ 'two hundreds thirty-one': 231
+ 'two hundreds thirty-two': 232
+ 'two hundreds thirty-three': 233
+ 'two hundreds thirty-four': 234
+ 'two hundreds thirty-five': 235
+ 'two hundreds thirty-six': 236
+ 'two hundreds thirty-seven': 237
+ 'two hundreds thirty-eight': 238
+ 'two hundreds thirty-nine': 239
+ 'two hundreds fourty': 240
+ 'two hundreds fourty-one': 241
+ 'two hundreds fourty-two': 242
+ 'two hundreds fourty-three': 243
+ 'two hundreds fourty-four': 244
+ 'two hundreds fourty-five': 245
+ 'two hundreds fourty-six': 246
+ 'two hundreds fourty-seven': 247
+ 'two hundreds fourty-eight': 248
+ 'two hundreds fourty-nine': 249
+ 'two hundreds fifty': 250
+ 'two hundreds fifty-one': 251
+ 'two hundreds fifty-two': 252
+ 'two hundreds fifty-three': 253
+ 'two hundreds fifty-four': 254
+ 'two hundreds fifty-five': 255
+ 'two hundreds fifty-six': 256
+ 'two hundreds fifty-seven': 257
+ 'two hundreds fifty-eight': 258
+ 'two hundreds fifty-nine': 259
+ 'two hundreds sixty': 260
+ 'two hundreds sixty-one': 261
+ 'two hundreds sixty-two': 262
+ 'two hundreds sixty-three': 263
+ 'two hundreds sixty-four': 264
+ 'two hundreds sixty-five': 265
+ 'two hundreds sixty-six': 266
+ 'two hundreds sixty-seven': 267
+ 'two hundreds sixty-eight': 268
+ 'two hundreds sixty-nine': 269
+ 'two hundreds seventy': 270
+ 'two hundreds seventy-one': 271
+ 'two hundreds seventy-two': 272
+ 'two hundreds seventy-three': 273
+ 'two hundreds seventy-four': 274
+ 'two hundreds seventy-five': 275
+ 'two hundreds seventy-six': 276
+ 'two hundreds seventy-seven': 277
+ 'two hundreds seventy-eight': 278
+ 'two hundreds seventy-nine': 279
+ 'two hundreds eighty': 280
+ 'two hundreds eighty-one': 281
+ 'two hundreds eighty-two': 282
+ 'two hundreds eighty-three': 283
+ 'two hundreds eighty-four': 284
+ 'two hundreds eighty-five': 285
+ 'two hundreds eighty-six': 286
+ 'two hundreds eighty-seven': 287
+ 'two hundreds eighty-eight': 288
+ 'two hundreds eighty-nine': 289
+ 'two hundreds ninety': 290
+ 'two hundreds ninety-one': 291
+ 'two hundreds ninety-two': 292
+ 'two hundreds ninety-three': 293
+ 'two hundreds ninety-four': 294
+ 'two hundreds ninety-five': 295
+ 'two hundreds ninety-six': 296
+ 'two hundreds ninety-seven': 297
+ 'two hundreds ninety-eight': 298
+ 'two hundreds ninety-nine': 299
+ 'three hundreds zero': 300
+ 'three hundreds one': 301
+ 'three hundreds two': 302
+ 'three hundreds three': 303
+ 'three hundreds four': 304
+ 'three hundreds five': 305
+ 'three hundreds six': 306
+ 'three hundreds seven': 307
+ 'three hundreds eight': 308
+ 'three hundreds nine': 309
+ 'three hundreds ten ten': 310
+ 'three hundreds eleven': 311
+ 'three hundreds twelve': 312
+ 'three hundreds thirteen': 313
+ 'three hundreds fourteen': 314
+ 'three hundreds fifteen': 315
+ 'three hundreds sixteen': 316
+ 'three hundreds seventeen': 317
+ 'three hundreds eighteen': 318
+ 'three hundreds nineteen': 319
+ 'three hundreds twenty': 320
+ 'three hundreds twenty-one': 321
+ 'three hundreds twenty-two': 322
+ 'three hundreds twenty-three': 323
+ 'three hundreds twenty-four': 324
+ 'three hundreds twenty-five': 325
+ 'three hundreds twenty-six': 326
+ 'three hundreds twenty-seven': 327
+ 'three hundreds twenty-eight': 328
+ 'three hundreds twenty-nine': 329
+ 'three hundreds thirty': 330
+ 'three hundreds thirty-one': 331
+ 'three hundreds thirty-two': 332
+ 'three hundreds thirty-three': 333
+ 'three hundreds thirty-four': 334
+ 'three hundreds thirty-five': 335
+ 'three hundreds thirty-six': 336
+ 'three hundreds thirty-seven': 337
+ 'three hundreds thirty-eight': 338
+ 'three hundreds thirty-nine': 339
+ 'three hundreds fourty': 340
+ 'three hundreds fourty-one': 341
+ 'three hundreds fourty-two': 342
+ 'three hundreds fourty-three': 343
+ 'three hundreds fourty-four': 344
+ 'three hundreds fourty-five': 345
+ 'three hundreds fourty-six': 346
+ 'three hundreds fourty-seven': 347
+ 'three hundreds fourty-eight': 348
+ 'three hundreds fourty-nine': 349
+ 'three hundreds fifty': 350
+ 'three hundreds fifty-one': 351
+ 'three hundreds fifty-two': 352
+ 'three hundreds fifty-three': 353
+ 'three hundreds fifty-four': 354
+ 'three hundreds fifty-five': 355
+ 'three hundreds fifty-six': 356
+ 'three hundreds fifty-seven': 357
+ 'three hundreds fifty-eight': 358
+ 'three hundreds fifty-nine': 359
+ 'three hundreds sixty': 360
+ 'three hundreds sixty-one': 361
+ 'three hundreds sixty-two': 362
+ 'three hundreds sixty-three': 363
+ 'three hundreds sixty-four': 364
+ 'three hundreds sixty-five': 365
+ 'three hundreds sixty-six': 366
+ 'three hundreds sixty-seven': 367
+ 'three hundreds sixty-eight': 368
+ 'three hundreds sixty-nine': 369
+ 'three hundreds seventy': 370
+ 'three hundreds seventy-one': 371
+ 'three hundreds seventy-two': 372
+ 'three hundreds seventy-three': 373
+ 'three hundreds seventy-four': 374
+ 'three hundreds seventy-five': 375
+ 'three hundreds seventy-six': 376
+ 'three hundreds seventy-seven': 377
+ 'three hundreds seventy-eight': 378
+ 'three hundreds seventy-nine': 379
+ 'three hundreds eighty': 380
+ 'three hundreds eighty-one': 381
+ 'three hundreds eighty-two': 382
+ 'three hundreds eighty-three': 383
+ 'three hundreds eighty-four': 384
+ 'three hundreds eighty-five': 385
+ 'three hundreds eighty-six': 386
+ 'three hundreds eighty-seven': 387
+ 'three hundreds eighty-eight': 388
+ 'three hundreds eighty-nine': 389
+ 'three hundreds ninety': 390
+ 'three hundreds ninety-one': 391
+ 'three hundreds ninety-two': 392
+ 'three hundreds ninety-three': 393
+ 'three hundreds ninety-four': 394
+ 'three hundreds ninety-five': 395
+ 'three hundreds ninety-six': 396
+ 'three hundreds ninety-seven': 397
+ 'three hundreds ninety-eight': 398
+ 'three hundreds ninety-nine': 399
+ 'four hundreds zero': 400
+ 'four hundreds one': 401
+ 'four hundreds two': 402
+ 'four hundreds three': 403
+ 'four hundreds four': 404
+ 'four hundreds five': 405
+ 'four hundreds six': 406
+ 'four hundreds seven': 407
+ 'four hundreds eight': 408
+ 'four hundreds nine': 409
+ 'four hundreds ten ten': 410
+ 'four hundreds eleven': 411
+ 'four hundreds twelve': 412
+ 'four hundreds thirteen': 413
+ 'four hundreds fourteen': 414
+ 'four hundreds fifteen': 415
+ 'four hundreds sixteen': 416
+ 'four hundreds seventeen': 417
+ 'four hundreds eighteen': 418
+ 'four hundreds nineteen': 419
+ 'four hundreds twenty': 420
+ 'four hundreds twenty-one': 421
+ 'four hundreds twenty-two': 422
+ 'four hundreds twenty-three': 423
+ 'four hundreds twenty-four': 424
+ 'four hundreds twenty-five': 425
+ 'four hundreds twenty-six': 426
+ 'four hundreds twenty-seven': 427
+ 'four hundreds twenty-eight': 428
+ 'four hundreds twenty-nine': 429
+ 'four hundreds thirty': 430
+ 'four hundreds thirty-one': 431
+ 'four hundreds thirty-two': 432
+ 'four hundreds thirty-three': 433
+ 'four hundreds thirty-four': 434
+ 'four hundreds thirty-five': 435
+ 'four hundreds thirty-six': 436
+ 'four hundreds thirty-seven': 437
+ 'four hundreds thirty-eight': 438
+ 'four hundreds thirty-nine': 439
+ 'four hundreds fourty': 440
+ 'four hundreds fourty-one': 441
+ 'four hundreds fourty-two': 442
+ 'four hundreds fourty-three': 443
+ 'four hundreds fourty-four': 444
+ 'four hundreds fourty-five': 445
+ 'four hundreds fourty-six': 446
+ 'four hundreds fourty-seven': 447
+ 'four hundreds fourty-eight': 448
+ 'four hundreds fourty-nine': 449
+ 'four hundreds fifty': 450
+ 'four hundreds fifty-one': 451
+ 'four hundreds fifty-two': 452
+ 'four hundreds fifty-three': 453
+ 'four hundreds fifty-four': 454
+ 'four hundreds fifty-five': 455
+ 'four hundreds fifty-six': 456
+ 'four hundreds fifty-seven': 457
+ 'four hundreds fifty-eight': 458
+ 'four hundreds fifty-nine': 459
+ 'four hundreds sixty': 460
+ 'four hundreds sixty-one': 461
+ 'four hundreds sixty-two': 462
+ 'four hundreds sixty-three': 463
+ 'four hundreds sixty-four': 464
+ 'four hundreds sixty-five': 465
+ 'four hundreds sixty-six': 466
+ 'four hundreds sixty-seven': 467
+ 'four hundreds sixty-eight': 468
+ 'four hundreds sixty-nine': 469
+ 'four hundreds seventy': 470
+ 'four hundreds seventy-one': 471
+ 'four hundreds seventy-two': 472
+ 'four hundreds seventy-three': 473
+ 'four hundreds seventy-four': 474
+ 'four hundreds seventy-five': 475
+ 'four hundreds seventy-six': 476
+ 'four hundreds seventy-seven': 477
+ 'four hundreds seventy-eight': 478
+ 'four hundreds seventy-nine': 479
+ 'four hundreds eighty': 480
+ 'four hundreds eighty-one': 481
+ 'four hundreds eighty-two': 482
+ 'four hundreds eighty-three': 483
+ 'four hundreds eighty-four': 484
+ 'four hundreds eighty-five': 485
+ 'four hundreds eighty-six': 486
+ 'four hundreds eighty-seven': 487
+ 'four hundreds eighty-eight': 488
+ 'four hundreds eighty-nine': 489
+ 'four hundreds ninety': 490
+ 'four hundreds ninety-one': 491
+ 'four hundreds ninety-two': 492
+ 'four hundreds ninety-three': 493
+ 'four hundreds ninety-four': 494
+ 'four hundreds ninety-five': 495
+ 'four hundreds ninety-six': 496
+ 'four hundreds ninety-seven': 497
+ 'four hundreds ninety-eight': 498
+ 'four hundreds ninety-nine': 499
+ 'five hundreds zero': 500
+ 'five hundreds one': 501
+ 'five hundreds two': 502
+ 'five hundreds three': 503
+ 'five hundreds four': 504
+ 'five hundreds five': 505
+ 'five hundreds six': 506
+ 'five hundreds seven': 507
+ 'five hundreds eight': 508
+ 'five hundreds nine': 509
+ 'five hundreds ten ten': 510
+ 'five hundreds eleven': 511
+ 'five hundreds twelve': 512
+ 'five hundreds thirteen': 513
+ 'five hundreds fourteen': 514
+ 'five hundreds fifteen': 515
+ 'five hundreds sixteen': 516
+ 'five hundreds seventeen': 517
+ 'five hundreds eighteen': 518
+ 'five hundreds nineteen': 519
+ 'five hundreds twenty': 520
+ 'five hundreds twenty-one': 521
+ 'five hundreds twenty-two': 522
+ 'five hundreds twenty-three': 523
+ 'five hundreds twenty-four': 524
+ 'five hundreds twenty-five': 525
+ 'five hundreds twenty-six': 526
+ 'five hundreds twenty-seven': 527
+ 'five hundreds twenty-eight': 528
+ 'five hundreds twenty-nine': 529
+ 'five hundreds thirty': 530
+ 'five hundreds thirty-one': 531
+ 'five hundreds thirty-two': 532
+ 'five hundreds thirty-three': 533
+ 'five hundreds thirty-four': 534
+ 'five hundreds thirty-five': 535
+ 'five hundreds thirty-six': 536
+ 'five hundreds thirty-seven': 537
+ 'five hundreds thirty-eight': 538
+ 'five hundreds thirty-nine': 539
+ 'five hundreds fourty': 540
+ 'five hundreds fourty-one': 541
+ 'five hundreds fourty-two': 542
+ 'five hundreds fourty-three': 543
+ 'five hundreds fourty-four': 544
+ 'five hundreds fourty-five': 545
+ 'five hundreds fourty-six': 546
+ 'five hundreds fourty-seven': 547
+ 'five hundreds fourty-eight': 548
+ 'five hundreds fourty-nine': 549
+ 'five hundreds fifty': 550
+ 'five hundreds fifty-one': 551
+ 'five hundreds fifty-two': 552
+ 'five hundreds fifty-three': 553
+ 'five hundreds fifty-four': 554
+ 'five hundreds fifty-five': 555
+ 'five hundreds fifty-six': 556
+ 'five hundreds fifty-seven': 557
+ 'five hundreds fifty-eight': 558
+ 'five hundreds fifty-nine': 559
+ 'five hundreds sixty': 560
+ 'five hundreds sixty-one': 561
+ 'five hundreds sixty-two': 562
+ 'five hundreds sixty-three': 563
+ 'five hundreds sixty-four': 564
+ 'five hundreds sixty-five': 565
+ 'five hundreds sixty-six': 566
+ 'five hundreds sixty-seven': 567
+ 'five hundreds sixty-eight': 568
+ 'five hundreds sixty-nine': 569
+ 'five hundreds seventy': 570
+ 'five hundreds seventy-one': 571
+ 'five hundreds seventy-two': 572
+ 'five hundreds seventy-three': 573
+ 'five hundreds seventy-four': 574
+ 'five hundreds seventy-five': 575
+ 'five hundreds seventy-six': 576
+ 'five hundreds seventy-seven': 577
+ 'five hundreds seventy-eight': 578
+ 'five hundreds seventy-nine': 579
+ 'five hundreds eighty': 580
+ 'five hundreds eighty-one': 581
+ 'five hundreds eighty-two': 582
+ 'five hundreds eighty-three': 583
+ 'five hundreds eighty-four': 584
+ 'five hundreds eighty-five': 585
+ 'five hundreds eighty-six': 586
+ 'five hundreds eighty-seven': 587
+ 'five hundreds eighty-eight': 588
+ 'five hundreds eighty-nine': 589
+ 'five hundreds ninety': 590
+ 'five hundreds ninety-one': 591
+ 'five hundreds ninety-two': 592
+ 'five hundreds ninety-three': 593
+ 'five hundreds ninety-four': 594
+ 'five hundreds ninety-five': 595
+ 'five hundreds ninety-six': 596
+ 'five hundreds ninety-seven': 597
+ 'five hundreds ninety-eight': 598
+ 'five hundreds ninety-nine': 599
+ 'six hundreds zero': 600
+ 'six hundreds one': 601
+ 'six hundreds two': 602
+ 'six hundreds three': 603
+ 'six hundreds four': 604
+ 'six hundreds five': 605
+ 'six hundreds six': 606
+ 'six hundreds seven': 607
+ 'six hundreds eight': 608
+ 'six hundreds nine': 609
+ 'six hundreds ten ten': 610
+ 'six hundreds eleven': 611
+ 'six hundreds twelve': 612
+ 'six hundreds thirteen': 613
+ 'six hundreds fourteen': 614
+ 'six hundreds fifteen': 615
+ 'six hundreds sixteen': 616
+ 'six hundreds seventeen': 617
+ 'six hundreds eighteen': 618
+ 'six hundreds nineteen': 619
+ 'six hundreds twenty': 620
+ 'six hundreds twenty-one': 621
+ 'six hundreds twenty-two': 622
+ 'six hundreds twenty-three': 623
+ 'six hundreds twenty-four': 624
+ 'six hundreds twenty-five': 625
+ 'six hundreds twenty-six': 626
+ 'six hundreds twenty-seven': 627
+ 'six hundreds twenty-eight': 628
+ 'six hundreds twenty-nine': 629
+ 'six hundreds thirty': 630
+ 'six hundreds thirty-one': 631
+ 'six hundreds thirty-two': 632
+ 'six hundreds thirty-three': 633
+ 'six hundreds thirty-four': 634
+ 'six hundreds thirty-five': 635
+ 'six hundreds thirty-six': 636
+ 'six hundreds thirty-seven': 637
+ 'six hundreds thirty-eight': 638
+ 'six hundreds thirty-nine': 639
+ 'six hundreds fourty': 640
+ 'six hundreds fourty-one': 641
+ 'six hundreds fourty-two': 642
+ 'six hundreds fourty-three': 643
+ 'six hundreds fourty-four': 644
+ 'six hundreds fourty-five': 645
+ 'six hundreds fourty-six': 646
+ 'six hundreds fourty-seven': 647
+ 'six hundreds fourty-eight': 648
+ 'six hundreds fourty-nine': 649
+ 'six hundreds fifty': 650
+ 'six hundreds fifty-one': 651
+ 'six hundreds fifty-two': 652
+ 'six hundreds fifty-three': 653
+ 'six hundreds fifty-four': 654
+ 'six hundreds fifty-five': 655
+ 'six hundreds fifty-six': 656
+ 'six hundreds fifty-seven': 657
+ 'six hundreds fifty-eight': 658
+ 'six hundreds fifty-nine': 659
+ 'six hundreds sixty': 660
+ 'six hundreds sixty-one': 661
+ 'six hundreds sixty-two': 662
+ 'six hundreds sixty-three': 663
+ 'six hundreds sixty-four': 664
+ 'six hundreds sixty-five': 665
+ 'six hundreds sixty-six': 666
+ 'six hundreds sixty-seven': 667
+ 'six hundreds sixty-eight': 668
+ 'six hundreds sixty-nine': 669
+ 'six hundreds seventy': 670
+ 'six hundreds seventy-one': 671
+ 'six hundreds seventy-two': 672
+ 'six hundreds seventy-three': 673
+ 'six hundreds seventy-four': 674
+ 'six hundreds seventy-five': 675
+ 'six hundreds seventy-six': 676
+ 'six hundreds seventy-seven': 677
+ 'six hundreds seventy-eight': 678
+ 'six hundreds seventy-nine': 679
+ 'six hundreds eighty': 680
+ 'six hundreds eighty-one': 681
+ 'six hundreds eighty-two': 682
+ 'six hundreds eighty-three': 683
+ 'six hundreds eighty-four': 684
+ 'six hundreds eighty-five': 685
+ 'six hundreds eighty-six': 686
+ 'six hundreds eighty-seven': 687
+ 'six hundreds eighty-eight': 688
+ 'six hundreds eighty-nine': 689
+ 'six hundreds ninety': 690
+ 'six hundreds ninety-one': 691
+ 'six hundreds ninety-two': 692
+ 'six hundreds ninety-three': 693
+ 'six hundreds ninety-four': 694
+ 'six hundreds ninety-five': 695
+ 'six hundreds ninety-six': 696
+ 'six hundreds ninety-seven': 697
+ 'six hundreds ninety-eight': 698
+ 'six hundreds ninety-nine': 699
+ 'seven hundreds zero': 700
+ 'seven hundreds one': 701
+ 'seven hundreds two': 702
+ 'seven hundreds three': 703
+ 'seven hundreds four': 704
+ 'seven hundreds five': 705
+ 'seven hundreds six': 706
+ 'seven hundreds seven': 707
+ 'seven hundreds eight': 708
+ 'seven hundreds nine': 709
+ 'seven hundreds ten ten': 710
+ 'seven hundreds eleven': 711
+ 'seven hundreds twelve': 712
+ 'seven hundreds thirteen': 713
+ 'seven hundreds fourteen': 714
+ 'seven hundreds fifteen': 715
+ 'seven hundreds sixteen': 716
+ 'seven hundreds seventeen': 717
+ 'seven hundreds eighteen': 718
+ 'seven hundreds nineteen': 719
+ 'seven hundreds twenty': 720
+ 'seven hundreds twenty-one': 721
+ 'seven hundreds twenty-two': 722
+ 'seven hundreds twenty-three': 723
+ 'seven hundreds twenty-four': 724
+ 'seven hundreds twenty-five': 725
+ 'seven hundreds twenty-six': 726
+ 'seven hundreds twenty-seven': 727
+ 'seven hundreds twenty-eight': 728
+ 'seven hundreds twenty-nine': 729
+ 'seven hundreds thirty': 730
+ 'seven hundreds thirty-one': 731
+ 'seven hundreds thirty-two': 732
+ 'seven hundreds thirty-three': 733
+ 'seven hundreds thirty-four': 734
+ 'seven hundreds thirty-five': 735
+ 'seven hundreds thirty-six': 736
+ 'seven hundreds thirty-seven': 737
+ 'seven hundreds thirty-eight': 738
+ 'seven hundreds thirty-nine': 739
+ 'seven hundreds fourty': 740
+ 'seven hundreds fourty-one': 741
+ 'seven hundreds fourty-two': 742
+ 'seven hundreds fourty-three': 743
+ 'seven hundreds fourty-four': 744
+ 'seven hundreds fourty-five': 745
+ 'seven hundreds fourty-six': 746
+ 'seven hundreds fourty-seven': 747
+ 'seven hundreds fourty-eight': 748
+ 'seven hundreds fourty-nine': 749
+ 'seven hundreds fifty': 750
+ 'seven hundreds fifty-one': 751
+ 'seven hundreds fifty-two': 752
+ 'seven hundreds fifty-three': 753
+ 'seven hundreds fifty-four': 754
+ 'seven hundreds fifty-five': 755
+ 'seven hundreds fifty-six': 756
+ 'seven hundreds fifty-seven': 757
+ 'seven hundreds fifty-eight': 758
+ 'seven hundreds fifty-nine': 759
+ 'seven hundreds sixty': 760
+ 'seven hundreds sixty-one': 761
+ 'seven hundreds sixty-two': 762
+ 'seven hundreds sixty-three': 763
+ 'seven hundreds sixty-four': 764
+ 'seven hundreds sixty-five': 765
+ 'seven hundreds sixty-six': 766
+ 'seven hundreds sixty-seven': 767
+ 'seven hundreds sixty-eight': 768
+ 'seven hundreds sixty-nine': 769
+ 'seven hundreds seventy': 770
+ 'seven hundreds seventy-one': 771
+ 'seven hundreds seventy-two': 772
+ 'seven hundreds seventy-three': 773
+ 'seven hundreds seventy-four': 774
+ 'seven hundreds seventy-five': 775
+ 'seven hundreds seventy-six': 776
+ 'seven hundreds seventy-seven': 777
+ 'seven hundreds seventy-eight': 778
+ 'seven hundreds seventy-nine': 779
+ 'seven hundreds eighty': 780
+ 'seven hundreds eighty-one': 781
+ 'seven hundreds eighty-two': 782
+ 'seven hundreds eighty-three': 783
+ 'seven hundreds eighty-four': 784
+ 'seven hundreds eighty-five': 785
+ 'seven hundreds eighty-six': 786
+ 'seven hundreds eighty-seven': 787
+ 'seven hundreds eighty-eight': 788
+ 'seven hundreds eighty-nine': 789
+ 'seven hundreds ninety': 790
+ 'seven hundreds ninety-one': 791
+ 'seven hundreds ninety-two': 792
+ 'seven hundreds ninety-three': 793
+ 'seven hundreds ninety-four': 794
+ 'seven hundreds ninety-five': 795
+ 'seven hundreds ninety-six': 796
+ 'seven hundreds ninety-seven': 797
+ 'seven hundreds ninety-eight': 798
+ 'seven hundreds ninety-nine': 799
+ 'eight hundreds zero': 800
+ 'eight hundreds one': 801
+ 'eight hundreds two': 802
+ 'eight hundreds three': 803
+ 'eight hundreds four': 804
+ 'eight hundreds five': 805
+ 'eight hundreds six': 806
+ 'eight hundreds seven': 807
+ 'eight hundreds eight': 808
+ 'eight hundreds nine': 809
+ 'eight hundreds ten ten': 810
+ 'eight hundreds eleven': 811
+ 'eight hundreds twelve': 812
+ 'eight hundreds thirteen': 813
+ 'eight hundreds fourteen': 814
+ 'eight hundreds fifteen': 815
+ 'eight hundreds sixteen': 816
+ 'eight hundreds seventeen': 817
+ 'eight hundreds eighteen': 818
+ 'eight hundreds nineteen': 819
+ 'eight hundreds twenty': 820
+ 'eight hundreds twenty-one': 821
+ 'eight hundreds twenty-two': 822
+ 'eight hundreds twenty-three': 823
+ 'eight hundreds twenty-four': 824
+ 'eight hundreds twenty-five': 825
+ 'eight hundreds twenty-six': 826
+ 'eight hundreds twenty-seven': 827
+ 'eight hundreds twenty-eight': 828
+ 'eight hundreds twenty-nine': 829
+ 'eight hundreds thirty': 830
+ 'eight hundreds thirty-one': 831
+ 'eight hundreds thirty-two': 832
+ 'eight hundreds thirty-three': 833
+ 'eight hundreds thirty-four': 834
+ 'eight hundreds thirty-five': 835
+ 'eight hundreds thirty-six': 836
+ 'eight hundreds thirty-seven': 837
+ 'eight hundreds thirty-eight': 838
+ 'eight hundreds thirty-nine': 839
+ 'eight hundreds fourty': 840
+ 'eight hundreds fourty-one': 841
+ 'eight hundreds fourty-two': 842
+ 'eight hundreds fourty-three': 843
+ 'eight hundreds fourty-four': 844
+ 'eight hundreds fourty-five': 845
+ 'eight hundreds fourty-six': 846
+ 'eight hundreds fourty-seven': 847
+ 'eight hundreds fourty-eight': 848
+ 'eight hundreds fourty-nine': 849
+ 'eight hundreds fifty': 850
+ 'eight hundreds fifty-one': 851
+ 'eight hundreds fifty-two': 852
+ 'eight hundreds fifty-three': 853
+ 'eight hundreds fifty-four': 854
+ 'eight hundreds fifty-five': 855
+ 'eight hundreds fifty-six': 856
+ 'eight hundreds fifty-seven': 857
+ 'eight hundreds fifty-eight': 858
+ 'eight hundreds fifty-nine': 859
+ 'eight hundreds sixty': 860
+ 'eight hundreds sixty-one': 861
+ 'eight hundreds sixty-two': 862
+ 'eight hundreds sixty-three': 863
+ 'eight hundreds sixty-four': 864
+ 'eight hundreds sixty-five': 865
+ 'eight hundreds sixty-six': 866
+ 'eight hundreds sixty-seven': 867
+ 'eight hundreds sixty-eight': 868
+ 'eight hundreds sixty-nine': 869
+ 'eight hundreds seventy': 870
+ 'eight hundreds seventy-one': 871
+ 'eight hundreds seventy-two': 872
+ 'eight hundreds seventy-three': 873
+ 'eight hundreds seventy-four': 874
+ 'eight hundreds seventy-five': 875
+ 'eight hundreds seventy-six': 876
+ 'eight hundreds seventy-seven': 877
+ 'eight hundreds seventy-eight': 878
+ 'eight hundreds seventy-nine': 879
+ 'eight hundreds eighty': 880
+ 'eight hundreds eighty-one': 881
+ 'eight hundreds eighty-two': 882
+ 'eight hundreds eighty-three': 883
+ 'eight hundreds eighty-four': 884
+ 'eight hundreds eighty-five': 885
+ 'eight hundreds eighty-six': 886
+ 'eight hundreds eighty-seven': 887
+ 'eight hundreds eighty-eight': 888
+ 'eight hundreds eighty-nine': 889
+ 'eight hundreds ninety': 890
+ 'eight hundreds ninety-one': 891
+ 'eight hundreds ninety-two': 892
+ 'eight hundreds ninety-three': 893
+ 'eight hundreds ninety-four': 894
+ 'eight hundreds ninety-five': 895
+ 'eight hundreds ninety-six': 896
+ 'eight hundreds ninety-seven': 897
+ 'eight hundreds ninety-eight': 898
+ 'eight hundreds ninety-nine': 899
+ 'nine hundreds zero': 900
+ 'nine hundreds one': 901
+ 'nine hundreds two': 902
+ 'nine hundreds three': 903
+ 'nine hundreds four': 904
+ 'nine hundreds five': 905
+ 'nine hundreds six': 906
+ 'nine hundreds seven': 907
+ 'nine hundreds eight': 908
+ 'nine hundreds nine': 909
+ 'nine hundreds ten ten': 910
+ 'nine hundreds eleven': 911
+ 'nine hundreds twelve': 912
+ 'nine hundreds thirteen': 913
+ 'nine hundreds fourteen': 914
+ 'nine hundreds fifteen': 915
+ 'nine hundreds sixteen': 916
+ 'nine hundreds seventeen': 917
+ 'nine hundreds eighteen': 918
+ 'nine hundreds nineteen': 919
+ 'nine hundreds twenty': 920
+ 'nine hundreds twenty-one': 921
+ 'nine hundreds twenty-two': 922
+ 'nine hundreds twenty-three': 923
+ 'nine hundreds twenty-four': 924
+ 'nine hundreds twenty-five': 925
+ 'nine hundreds twenty-six': 926
+ 'nine hundreds twenty-seven': 927
+ 'nine hundreds twenty-eight': 928
+ 'nine hundreds twenty-nine': 929
+ 'nine hundreds thirty': 930
+ 'nine hundreds thirty-one': 931
+ 'nine hundreds thirty-two': 932
+ 'nine hundreds thirty-three': 933
+ 'nine hundreds thirty-four': 934
+ 'nine hundreds thirty-five': 935
+ 'nine hundreds thirty-six': 936
+ 'nine hundreds thirty-seven': 937
+ 'nine hundreds thirty-eight': 938
+ 'nine hundreds thirty-nine': 939
+ 'nine hundreds fourty': 940
+ 'nine hundreds fourty-one': 941
+ 'nine hundreds fourty-two': 942
+ 'nine hundreds fourty-three': 943
+ 'nine hundreds fourty-four': 944
+ 'nine hundreds fourty-five': 945
+ 'nine hundreds fourty-six': 946
+ 'nine hundreds fourty-seven': 947
+ 'nine hundreds fourty-eight': 948
+ 'nine hundreds fourty-nine': 949
+ 'nine hundreds fifty': 950
+ 'nine hundreds fifty-one': 951
+ 'nine hundreds fifty-two': 952
+ 'nine hundreds fifty-three': 953
+ 'nine hundreds fifty-four': 954
+ 'nine hundreds fifty-five': 955
+ 'nine hundreds fifty-six': 956
+ 'nine hundreds fifty-seven': 957
+ 'nine hundreds fifty-eight': 958
+ 'nine hundreds fifty-nine': 959
+ 'nine hundreds sixty': 960
+ 'nine hundreds sixty-one': 961
+ 'nine hundreds sixty-two': 962
+ 'nine hundreds sixty-three': 963
+ 'nine hundreds sixty-four': 964
+ 'nine hundreds sixty-five': 965
+ 'nine hundreds sixty-six': 966
+ 'nine hundreds sixty-seven': 967
+ 'nine hundreds sixty-eight': 968
+ 'nine hundreds sixty-nine': 969
+ 'nine hundreds seventy': 970
+ 'nine hundreds seventy-one': 971
+ 'nine hundreds seventy-two': 972
+ 'nine hundreds seventy-three': 973
+ 'nine hundreds seventy-four': 974
+ 'nine hundreds seventy-five': 975
+ 'nine hundreds seventy-six': 976
+ 'nine hundreds seventy-seven': 977
+ 'nine hundreds seventy-eight': 978
+ 'nine hundreds seventy-nine': 979
+ 'nine hundreds eighty': 980
+ 'nine hundreds eighty-one': 981
+ 'nine hundreds eighty-two': 982
+ 'nine hundreds eighty-three': 983
+ 'nine hundreds eighty-four': 984
+ 'nine hundreds eighty-five': 985
+ 'nine hundreds eighty-six': 986
+ 'nine hundreds eighty-seven': 987
+ 'nine hundreds eighty-eight': 988
+ 'nine hundreds eighty-nine': 989
+ 'nine hundreds ninety': 990
+ 'nine hundreds ninety-one': 991
+ 'nine hundreds ninety-two': 992
+ 'nine hundreds ninety-three': 993
+ 'nine hundreds ninety-four': 994
+ 'nine hundreds ninety-five': 995
+ 'nine hundreds ninety-six': 996
+ 'nine hundreds ninety-seven': 997
+ 'nine hundreds ninety-eight': 998
+ 'nine hundreds ninety-nine': 999}

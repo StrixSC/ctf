@@ -1,6 +1,5 @@
-# StrixSC | Math Challenge | PolyCTF 20-02-2021
+# StrixSC | Math Challenge | 24H@CTF (PolyHx) 20-02-2021
 
-# Inflect is the only reason I used python lol
 import inflect
 from pwn import *
 
@@ -45,10 +44,10 @@ for i in range(0, 10000):
     word_form = p.number_to_words(i)
     word_form = word_form.replace(",", "")
 
-    if(index[2] == '0' and index[3] == '0'): 
+    if(index[2] == '0' and index[3] == '0'):
         word_form += " zero"
 
-    if(index[1] != '1'): 
+    if(index[1] != '1'):
         word_form = word_form.replace("hundred", "hundreds")
 
     if(index[0] != '1'):
@@ -68,7 +67,6 @@ for i in range(0, 10):
     inpt.replace("\n","")
     formula = createFormula(inpt.splitlines(True)[2])
 
-    # Dont hardcode, its bad. Im just lazy
     firstNumber = num_words[formula[0]]
     secondNumber = num_words[formula[2]]
     thirdNumber = num_words[formula[4]]

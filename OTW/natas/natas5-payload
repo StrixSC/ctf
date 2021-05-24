@@ -1,0 +1,1 @@
+curl --cookie-jar - --cookie "loggedin=1" -v --user natas5:iX6IOfmpN7AYOQGPwtn3fXpbaJVJcHfq "http://natas5.natas.labs.overthewire.org/"

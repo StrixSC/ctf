@@ -1,3 +1,5 @@
+// StrixSC | Caesar | PolyCTF 20-02-2021
+
 import * as net from "net";
 var base64 = require('base-64');
 var rot = require('rot');

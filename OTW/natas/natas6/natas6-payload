@@ -1,0 +1,1 @@
+curl --user natas6:aGoY4q2Dc6MgDq4oL4YtoKtyAg9PeHa1 -v --form "submit=1" --form "secret=FOEIUWGHFEEUHOFUOIU" "http://natas6.natas.labs.overthewire.org/index.php"
