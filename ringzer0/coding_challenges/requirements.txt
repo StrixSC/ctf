@@ -1,0 +1,7 @@
+Flask==1.1.1
+pwntools==4.5.0
+requests==2.25.1
+Pillow==8.2.0
+nltk==3.6.2
+gibberish-detector==0.1.1
+pytesseract==0.3.7
