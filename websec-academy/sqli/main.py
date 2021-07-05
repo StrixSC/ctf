@@ -4,12 +4,14 @@ import sys
 import urllib3
 from lab1 import solve as solve_1
 from lab2 import solve as solve_2
+from lab3 import solve as solve_3
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 solve_functions = {
-    '1': solve_1,
-    '2': solve_2
+    '01': solve_1,
+    '02': solve_2,
+    '03': solve_3
 }
 
 if __name__ == "__main__":
