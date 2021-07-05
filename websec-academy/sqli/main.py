@@ -7,7 +7,7 @@ from lab2 import solve as solve_2
 from lab3 import solve as solve_3
 from lab4 import solve as solve_4
 from lab5 import solve as solve_5
-
+from lab6 import solve as solve_6
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 solve_functions = {
@@ -15,7 +15,8 @@ solve_functions = {
     '02': solve_2,
     '03': solve_3,
     '04': solve_4,
-    '05': solve_5
+    '05': solve_5,
+    '06': solve_6
 }
 
 if __name__ == "__main__":
@@ -25,13 +26,13 @@ if __name__ == "__main__":
         lab_num = sys.argv[3].strip()
     except IndexError:
         print("[-] Usage: %s <url> <payload> <lab number>" % sys.argv[0])
-        print("[-] Example: %s www.example.com \"1=1\" 01" % sys.argv[0])
+        print("[-] Example: %s www.example.com \"0=1\" 01" % sys.argv[0])
         sys.exit(-1)
 
     if lab_num not in solve_functions:
         print("[-] Lab solve function is not yet implemented or does not exist")
         sys.exit(-1)
-    
+
     if solve_functions[lab_num](url, payload) == True:
         print("[+] SQL Injection successful")
     else:
