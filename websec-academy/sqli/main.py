@@ -8,6 +8,9 @@ from lab3 import solve as solve_3
 from lab4 import solve as solve_4
 from lab5 import solve as solve_5
 from lab6 import solve as solve_6
+from lab7 import solve as solve_7
+from lab8 import solve as solve_8
+
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 solve_functions = {
@@ -16,7 +19,9 @@ solve_functions = {
     '03': solve_3,
     '04': solve_4,
     '05': solve_5,
-    '06': solve_6
+    '06': solve_6,
+    '07': solve_7,
+    '08': solve_8,
 }
 
 if __name__ == "__main__":
