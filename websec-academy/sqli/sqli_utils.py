@@ -17,11 +17,14 @@ def default_solve(url, payload):
         return False
     elif res.status_code == 500:
         print("[!] Error 500: Invalid SQLi")
+    table = re.search('<tbody>(.*)</tbody>', res.text)
+    if table:
+        print(table.group(1))
+        if "Congratulations, you solved the lab!" in res.text:
+            print("[+] ================================")
+            return True
 
-    if "Congratulations, you solved the lab!" in res.text:
-        print("[+] ================================")
-        return True
-
+    return False
 
 def scan_url(url):
     r = requests.Session()

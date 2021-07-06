@@ -13,6 +13,7 @@ from lab6 import solve as solve_6
 from lab7 import solve as solve_7
 from lab8 import solve as solve_8
 from lab9 import solve as solve_9
+from lab10 import solve as solve_10
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
@@ -27,6 +28,7 @@ solve_functions = {
     '07': solve_7,
     '08': solve_8,
     '09': solve_9,
+    '10': solve_10,
 }
 
 dbms = 'MySQL',
