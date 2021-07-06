@@ -2,6 +2,8 @@
 
 import sys
 import urllib3
+import argparse
+from sqli_utils import default_solve, get_column_types, scan_url, sqli_count_columns
 from lab1 import solve as solve_1
 from lab2 import solve as solve_2
 from lab3 import solve as solve_3
@@ -12,10 +14,10 @@ from lab7 import solve as solve_7
 from lab8 import solve as solve_8
 from lab9 import solve as solve_9
 
-
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 solve_functions = {
+    '00': default_solve,
     '01': solve_1,
     '02': solve_2,
     '03': solve_3,
@@ -27,22 +29,31 @@ solve_functions = {
     '09': solve_9,
 }
 
-if __name__ == "__main__":
-    try:
-        url = sys.argv[1].strip()
-        payload = sys.argv[2].strip()
-        lab_num = sys.argv[3].strip()
-    except IndexError:
-        print("[-] Usage: %s <url> <payload> <lab number>" % sys.argv[0])
-        print("[-] Example: %s www.example.com \"0=1\" 01" % sys.argv[0])
-        sys.exit(-1)
+dbms = 'MySQL',
+lab_num = '00',
+payload = '', 
 
-    if lab_num not in solve_functions:
-        print("[-] Lab solve function is not yet implemented or does not exist")
-        sys.exit(-1)
-
+def main(url, payload):
     if solve_functions[lab_num](url, payload) == True:
         print("[+] SQL Injection successful")
     else:
         print("[-] SQL Injection unsuccessful")
 
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description='SQLi injection tool for PortSwigger websec academy labs.')
+    parser.add_argument('url', metavar='URL', type=str, help="URL of the lab instance")
+    parser.add_argument('--payload', dest='payload', default='', type=str, help="SQLi Payload")
+    parser.add_argument('--lab', dest='lab_num', default='00', type=str, help="Number of the lab. Example: --lab 03.")
+    parser.add_argument('--dbms', dest='dbms', default='MySQL', type=str, help="Which DBMS is the lab using? Available DBMS': Microsoft, MySQL, Oracle, Postgres.")
+    parser.add_argument('--analyze', default=False, action='store_true', dest='analyze', help='Run the scan on the given url to get column count and types')
+
+    args = parser.parse_args()
+
+    lab_num = args.lab_num
+    dbms = args.dbms
+    payload = args.payload
+
+    if args.analyze:
+        scan_url(args.url)
+    else:
+        main(args.url, args.payload)

