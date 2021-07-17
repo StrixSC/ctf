@@ -1,3 +1,4 @@
+# !/usr/bin/python3.9
 # Base of the script is taken from https://github.com/rkhal101/Web-Security-Academy-Series/blob/main/sql-injection/lab-01/sqli-lab-01.py
 
 import sys
@@ -14,6 +15,7 @@ from lab7 import solve as solve_7
 from lab8 import solve as solve_8
 from lab9 import solve as solve_9
 from lab10 import solve as solve_10
+from lab11 import solve as solve_11
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
@@ -33,7 +35,7 @@ solve_functions = {
 
 dbms = 'MySQL',
 lab_num = '00',
-payload = '', 
+payload = '',
 
 def main(url, payload):
     if solve_functions[lab_num](url, payload) == True:
