@@ -1,0 +1,21 @@
+Package: avahi-nodbus-daemon
+Version: 0.6.32-3
+Depends: libc, libavahi-nodbus-support, libexpat, librt, libdaemon
+Provides: avahi-daemon
+Source: feeds/packages/libs/avahi
+Section: net
+Require-User: avahi=105:avahi=105
+Maintainer: Ted Hess <thess@kitschensync.net>
+Architecture: mipsel_24kc
+Installed-Size: 20375
+Description:  Avahi is an mDNS/DNS-SD (aka RendezVous/Bonjour/ZeroConf)
+ implementation (library). It facilitates
+ service discovery on a local network -- this means that
+ you can plug your laptop or computer into a network and
+ instantly be able to view other people who you can chat with,
+ find printers to print to or find files being shared.
+ This kind of technology is already found in MacOS X
+ (branded 'Rendezvous', 'Bonjour' and sometimes 'ZeroConf')
+ and is very convenient.
+ .
+ This package contains an mDNS/DNS-SD daemon.

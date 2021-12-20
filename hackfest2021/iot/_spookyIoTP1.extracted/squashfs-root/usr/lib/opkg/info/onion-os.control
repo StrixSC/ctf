@@ -1,0 +1,8 @@
+Package: onion-os
+Version: 1.0.6-1
+Depends: libc, shellinabox
+Source: feeds/onion/onion-os
+Section: onion
+Architecture: mipsel_24kc
+Installed-Size: 505737
+Description:  OnionOS for headless IoT devices

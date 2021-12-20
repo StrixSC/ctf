@@ -1,0 +1,8 @@
+Package: libonioni2c
+Version: 0.9-1
+Depends: libc, liboniondebug
+Source: feeds/onion/i2c-exp-driver
+Section: onion
+Architecture: mipsel_24kc
+Installed-Size: 3227
+Description:  Library of I2C communication functions

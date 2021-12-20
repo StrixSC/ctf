@@ -1,0 +1,9 @@
+Package: kmod-p44-ledchain
+Version: 4.14.81+2.0-7
+Depends: kernel (=4.14.81-1-065d3f5a79063c7a7b1cb696e2c65ad2)
+Source: feeds/onion/p44-ledchain
+Section: kernel
+Architecture: mipsel_24kc
+Installed-Size: 6130
+Description:  This package contains the p44-ledchain kernel driver for WS28xx and SK68xx type serial LED chains
+ for MT7688, which uses PWM unit to generate the WS28xx timing without blocking IRQs.

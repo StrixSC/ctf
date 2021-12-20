@@ -1,0 +1,2 @@
+/etc/modules.d/pwm-mediatek-ramips
+/lib/modules/4.14.81/pwm-mediatek-ramips.ko

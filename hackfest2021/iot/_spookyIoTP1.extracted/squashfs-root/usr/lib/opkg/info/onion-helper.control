@@ -1,0 +1,8 @@
+Package: onion-helper
+Version: 0.1-1
+Depends: libc, libubox, libubus, libcurl
+Source: feeds/onion/onion-helper
+Section: onion
+Architecture: mipsel_24kc
+Installed-Size: 4169
+Description:  C-based ubus service to implement various features on OpenWRT

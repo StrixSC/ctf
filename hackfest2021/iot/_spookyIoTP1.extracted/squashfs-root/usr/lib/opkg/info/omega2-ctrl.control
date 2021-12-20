@@ -1,0 +1,8 @@
+Package: omega2-ctrl
+Version: 0.3-1
+Depends: libc
+Source: feeds/onion/omega2-ctrl
+Section: onion
+Architecture: mipsel_24kc
+Installed-Size: 3414
+Description:  Utility to control the Omega2's low-level hardware

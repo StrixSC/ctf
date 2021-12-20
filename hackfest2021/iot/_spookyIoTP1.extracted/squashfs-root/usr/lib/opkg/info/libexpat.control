@@ -1,0 +1,11 @@
+Package: libexpat
+Version: 2.2.9-1
+Depends: libc
+Source: feeds/packages/libs/expat
+License: MIT
+LicenseFiles: COPYING
+Section: libs
+Maintainer: Ted Hess <thess@kitschensync.net>
+Architecture: mipsel_24kc
+Installed-Size: 47081
+Description:  A fast, non-validating, stream-oriented XML parsing library.

@@ -1,0 +1,2 @@
+/lib/modules/4.14.81/autofs4.ko
+/etc/modules.d/30-fs-autofs4

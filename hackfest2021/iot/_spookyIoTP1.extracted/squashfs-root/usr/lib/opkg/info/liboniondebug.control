@@ -1,0 +1,8 @@
+Package: liboniondebug
+Version: 0.9-1
+Depends: libc
+Source: feeds/onion/i2c-exp-driver
+Section: onion
+Architecture: mipsel_24kc
+Installed-Size: 1215
+Description:  Library used to ease debug

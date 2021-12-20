@@ -1,0 +1,10 @@
+Package: spi-tools
+Version: 1-cc6a41fdcec60610703ba6db488c621c64952898
+Depends: libc
+Source: feeds/packages/utils/spi-tools
+License: GPL-2.0
+Section: utils
+Maintainer: John Crispin <blogic@openwrt.org>
+Architecture: mipsel_24kc
+Installed-Size: 4179
+Description:  Command line SPI tools

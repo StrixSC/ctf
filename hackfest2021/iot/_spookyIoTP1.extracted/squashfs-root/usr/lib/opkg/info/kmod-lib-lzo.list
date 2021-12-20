@@ -1,0 +1,4 @@
+/etc/modules.d/lib-lzo
+/lib/modules/4.14.81/lzo_decompress.ko
+/lib/modules/4.14.81/lzo_compress.ko
+/lib/modules/4.14.81/lzo.ko

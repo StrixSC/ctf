@@ -1,0 +1,8 @@
+/lib/modules/4.14.81/bluetooth.ko
+/lib/modules/4.14.81/btusb.ko
+/lib/modules/4.14.81/bnep.ko
+/etc/modules.d/bluetooth
+/lib/modules/4.14.81/rfcomm.ko
+/lib/modules/4.14.81/btintel.ko
+/lib/modules/4.14.81/hci_uart.ko
+/lib/modules/4.14.81/hidp.ko

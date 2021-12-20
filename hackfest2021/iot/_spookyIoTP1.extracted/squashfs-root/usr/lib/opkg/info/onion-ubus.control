@@ -1,0 +1,8 @@
+Package: onion-ubus
+Version: 0.3-2
+Depends: libc, rpcd, iwinfo, oupgrade, libugpio
+Source: feeds/onion/onion-ubus
+Section: onion
+Architecture: mipsel_24kc
+Installed-Size: 4176
+Description:  Collection of Onion ubus tools

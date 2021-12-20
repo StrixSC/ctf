@@ -1,0 +1,9 @@
+Package: onion-repo-keys
+Version: 0.1-1
+Depends: libc, usign
+Source: feeds/onion/onion-repo-keys
+License: GPL-2.0
+Section: onion
+Architecture: mipsel_24kc
+Installed-Size: 390
+Description:  Signature keys required for Onion Package Repo

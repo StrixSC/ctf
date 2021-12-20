@@ -1,0 +1,5 @@
+/etc/modules.d/65-video-videobuf2
+/lib/modules/4.14.81/videobuf2-memops.ko
+/lib/modules/4.14.81/videobuf2-v4l2.ko
+/lib/modules/4.14.81/videobuf2-vmalloc.ko
+/lib/modules/4.14.81/videobuf2-core.ko

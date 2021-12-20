@@ -1,0 +1,9 @@
+Package: wifi-warp-core
+Version: 0.1.0-1
+Depends: libc, wireless-tools, maccalc, libuci, coreutils-base64, libcurl
+Source: feeds/onion/wifi-warp-core
+License: GPL-2.0
+Section: onion
+Architecture: mipsel_24kc
+Installed-Size: 794632
+Description:  Onion's Enhanced Omega2 MT7688 WiFi Driver

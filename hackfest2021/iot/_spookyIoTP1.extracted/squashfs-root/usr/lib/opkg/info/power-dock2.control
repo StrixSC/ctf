@@ -1,0 +1,8 @@
+Package: power-dock2
+Version: 0.5-1
+Depends: libc, power-dock, bc
+Source: feeds/onion/power-dock
+Section: onion
+Architecture: mipsel_24kc
+Installed-Size: 1309
+Description:  Onion Power Dock 2 application

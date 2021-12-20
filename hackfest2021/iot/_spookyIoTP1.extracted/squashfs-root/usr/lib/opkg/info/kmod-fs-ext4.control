@@ -1,0 +1,9 @@
+Package: kmod-fs-ext4
+Version: 4.14.81-1
+Depends: kernel (=4.14.81-1-065d3f5a79063c7a7b1cb696e2c65ad2), kmod-lib-crc16, kmod-crypto-hash, kmod-crypto-crc32c
+Source: package/kernel/linux
+License: GPL-2.0
+Section: kernel
+Architecture: mipsel_24kc
+Installed-Size: 238277
+Description:  Kernel module for EXT4 filesystem support

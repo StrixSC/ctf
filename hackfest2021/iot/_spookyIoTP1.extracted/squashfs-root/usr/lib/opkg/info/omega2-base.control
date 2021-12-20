@@ -1,0 +1,8 @@
+Package: omega2-base
+Version: 1.0.0-2
+Depends: libc
+Source: feeds/onion/omega2-base
+Section: onion
+Architecture: mipsel_24kc
+Installed-Size: 1264
+Description:  Omega2 family base packages and configuration

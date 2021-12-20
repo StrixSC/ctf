@@ -1,0 +1,2 @@
+/etc/modules.d/input-uinput
+/lib/modules/4.14.81/uinput.ko

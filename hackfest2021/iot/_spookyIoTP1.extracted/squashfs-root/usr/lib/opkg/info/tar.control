@@ -1,0 +1,12 @@
+Package: tar
+Version: 1.32-1
+Depends: xz, libc, bzip2
+Source: feeds/packages/utils/tar
+License: GPL-3.0
+LicenseFiles: COPYING
+Section: utils
+Maintainer: Álvaro Fernández Rojas <noltari@gmail.com>
+Architecture: mipsel_24kc
+Installed-Size: 163444
+Description:  Tar is a program for packaging a set of files as a
+ single archive in tar format.

@@ -1,0 +1,2 @@
+/usr/bin/usbAutorun
+/etc/hotplug.d/usb/20-autorun

@@ -1,0 +1,4 @@
+/etc/modules.d/mmc
+/lib/modules/4.14.81/mmc_block.ko
+/etc/modules-boot.d/mmc
+/lib/modules/4.14.81/mmc_core.ko

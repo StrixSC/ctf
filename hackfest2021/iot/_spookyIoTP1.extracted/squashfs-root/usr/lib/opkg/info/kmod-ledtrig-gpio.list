@@ -1,0 +1,2 @@
+/lib/modules/4.14.81/ledtrig-gpio.ko
+/etc/modules.d/50-ledtrig-gpio

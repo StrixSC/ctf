@@ -1,0 +1,8 @@
+Package: fast-gpio
+Version: 0.2-1
+Depends: libc, onion-sh-lib, uclibcxx
+Source: feeds/onion/fast-gpio
+Section: onion
+Architecture: mipsel_24kc
+Installed-Size: 6759
+Description:  Tool to enable GPIO access and PWM support

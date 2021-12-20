@@ -1,0 +1,10 @@
+Package: coreutils-base64
+Version: 8.23-4
+Depends: libc, coreutils
+Alternatives: 300:/bin/base64:/usr/bin/gnu-base64
+Source: feeds/packages/utils/coreutils
+Section: utils
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+Architecture: mipsel_24kc
+Installed-Size: 18041
+Description:  Full version of standard GNU base64 utility.

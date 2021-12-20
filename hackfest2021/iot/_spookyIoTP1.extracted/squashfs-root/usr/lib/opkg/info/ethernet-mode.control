@@ -1,0 +1,8 @@
+Package: ethernet-mode
+Version: 0.3-8
+Depends: libc, onion-script
+Source: feeds/onion/onion-script
+Section: onion
+Architecture: mipsel_24kc
+Installed-Size: 548
+Description:  Program to help automate production-time ethernet configuration

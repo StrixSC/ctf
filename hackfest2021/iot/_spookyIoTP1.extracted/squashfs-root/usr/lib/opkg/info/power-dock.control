@@ -1,0 +1,8 @@
+Package: power-dock
+Version: 0.5-1
+Depends: libc, libugpio, liboniondebug
+Source: feeds/onion/power-dock
+Section: onion
+Architecture: mipsel_24kc
+Installed-Size: 2730
+Description:  Onion Power Dock Application

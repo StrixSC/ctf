@@ -1,0 +1,8 @@
+Package: hostname-tool
+Version: 0.7-1
+Depends: libc
+Source: feeds/onion/hostname-tool
+Section: onion
+Architecture: mipsel_24kc
+Installed-Size: 865
+Description:  Tool to properly set the Omega2's Hostname to the last 4 digits of its MAC address

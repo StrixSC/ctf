@@ -1,0 +1,8 @@
+Package: url-enc-dec
+Version: 0.1-1
+Depends: libc, libcurl
+Source: feeds/onion/url-enc-dec
+Section: onion
+Architecture: mipsel_24kc
+Installed-Size: 1855
+Description:  Command line tools for URL encoding and decoding strings

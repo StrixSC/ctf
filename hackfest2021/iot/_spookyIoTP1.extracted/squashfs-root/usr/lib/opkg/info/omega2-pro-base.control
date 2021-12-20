@@ -1,0 +1,8 @@
+Package: omega2-pro-base
+Version: 1.0.3-1
+Depends: libc, fdisk, e2fsprogs, block-mount, swap-utils, tar
+Source: feeds/onion/omega2pro
+Section: onion
+Architecture: mipsel_24kc
+Installed-Size: 1321
+Description:  Omega2 Pro base packages and configuration

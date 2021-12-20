@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "csv": "^6.0.4",
+    "csv-parser": "^3.0.0",
+    "fast-csv": "^4.3.6",
+    "json-2-csv": "^3.14.4",
+    "json2csv": "^5.0.6"
+  }
+}

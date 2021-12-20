@@ -1,0 +1,8 @@
+Package: oupgrade
+Version: 0.4-3
+Depends: libc, wget
+Source: feeds/onion/oupgrade
+Section: onion
+Architecture: mipsel_24kc
+Installed-Size: 5535
+Description:  Tool to upgrade device firmware with latest from Onion repo

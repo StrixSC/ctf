@@ -1,0 +1,8 @@
+Package: onion-script
+Version: 0.3-8
+Depends: libc, wget, bc
+Source: feeds/onion/onion-script
+Section: onion
+Architecture: mipsel_24kc
+Installed-Size: 7807
+Description:  Command to help with Onion product automation

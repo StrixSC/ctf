@@ -1,0 +1,8 @@
+Package: kmod-w1-gpio-custom
+Version: 4.14.81-3
+Depends: kernel (=4.14.81-1-065d3f5a79063c7a7b1cb696e2c65ad2), kmod-w1, kmod-w1-master-gpio
+Source: package/kernel/w1-gpio-custom
+Section: kernel
+Architecture: mipsel_24kc
+Installed-Size: 1582
+Description:  Kernel module to register a custom w1-gpio platform device.

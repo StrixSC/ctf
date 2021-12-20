@@ -1,0 +1,9 @@
+Package: kmod-usb-serial-ftdi
+Version: 4.14.81-1
+Depends: kernel (=4.14.81-1-065d3f5a79063c7a7b1cb696e2c65ad2), kmod-usb-serial
+Source: package/kernel/linux
+License: GPL-2.0
+Section: kernel
+Architecture: mipsel_24kc
+Installed-Size: 12696
+Description:  Kernel support for FTDI USB-to-Serial converters

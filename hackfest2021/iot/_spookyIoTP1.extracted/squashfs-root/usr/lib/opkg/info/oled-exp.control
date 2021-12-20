@@ -1,0 +1,8 @@
+Package: oled-exp
+Version: 0.9-1
+Depends: libc, liboniondebug, libonioni2c, libonionoledexp
+Source: feeds/onion/i2c-exp-driver
+Section: onion
+Architecture: mipsel_24kc
+Installed-Size: 6997
+Description:  Driver for OLED Expansion

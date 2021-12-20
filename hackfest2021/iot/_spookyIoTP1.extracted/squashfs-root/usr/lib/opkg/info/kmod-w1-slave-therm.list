@@ -1,0 +1,2 @@
+/etc/modules.d/w1-slave-therm
+/lib/modules/4.14.81/w1_therm.ko

@@ -1,0 +1,8 @@
+Package: relay-exp
+Version: 0.9-1
+Depends: libc, liboniondebug, libonioni2c, libonionmcp23008, libonionrelayexp
+Source: feeds/onion/i2c-exp-driver
+Section: onion
+Architecture: mipsel_24kc
+Installed-Size: 3763
+Description:  Driver for Relay Expansion

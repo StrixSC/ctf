@@ -1,0 +1,8 @@
+Package: p44-ledchain
+Version: 2.0-7
+Depends: libc, kmod-p44-ledchain
+Source: feeds/onion/p44-ledchain
+Section: onion
+Architecture: mipsel_24kc
+Installed-Size: 198
+Description:  Implements p44-ledchain kernel driver for WS28xx and SK68xx type serial LED chains for MT7688
