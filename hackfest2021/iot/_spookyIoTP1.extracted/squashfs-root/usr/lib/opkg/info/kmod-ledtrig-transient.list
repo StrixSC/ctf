@@ -1,3 +1,0 @@
-/etc/modules.d/50-ledtrig-transient
-/etc/modules-boot.d/50-ledtrig-transient
-/lib/modules/4.14.81/ledtrig-transient.ko

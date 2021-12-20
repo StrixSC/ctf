@@ -1,9 +1,0 @@
-#!/bin/sh /etc/rc.common
-
-START=99
-
-BIN="/usr/bin/oupgrade --acknowledge"
-
-boot() {
-    $BIN
-}

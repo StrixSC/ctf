@@ -1,2 +1,0 @@
-/etc/modules.d/10-crypto-ecdh
-/lib/modules/4.14.81/ecdh_generic.ko
