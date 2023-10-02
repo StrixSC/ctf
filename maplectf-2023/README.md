@@ -8,7 +8,7 @@ The challenge provides two source files:
 1. checker.js: The JavaScript code to reverse.
 2. index.html:  Simple HTML file containing a `<script>` tag that links to `checker.js`
 
-### Checker.js
+## Checker.js
 
 The Checker.js contains the code that we have to understand and reverse engineer in order to get the flag. 
 
