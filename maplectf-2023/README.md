@@ -70,15 +70,15 @@ The other method in the file can be split into four sections:
    For this third section, we have another condition that if passed will cause the `fleg` variable to be modified, adding an `a` as well as a few other values directly to the string.
     
 4. ```javascript
-    const hiss = honk.three;
-      if (hiss === "_are_a_mId_FruiT}") {
-        fleg += hiss;
-      }
-    }
-   
-    if (await hash(fleg) == "bfe06d1e92942a0eca51881a879a0a9aef3fe75acaece04877eb0a26ceb8710d") {
-      console.log(fleg);
-    }
+	    const hiss = honk.three;
+	      if (hiss === "_are_a_mId_FruiT}") {
+	        fleg += hiss;
+	      }
+	    }
+	   
+	    if (await hash(fleg) == "bfe06d1e92942a0eca51881a879a0a9aef3fe75acaece04877eb0a26ceb8710d") {
+	      console.log(fleg);
+	    }
     }
     ```
    Finally, for this last section, we can see that if the if-statement passes, there will be another update to the `fleg` variable, adding the string `_are_a_mId_FruiT}` to it. Judging from the last curly brace, we can assume that this is the ending of the flag.
